@@ -6,9 +6,9 @@ notebook: 3_pending_from_me
 
 ## ActionItem
 
-  * **Ask mousing to open about_python repository in GitHub and allow me to commit and push on it.**
-  * **Summary today’s curriculums and share it with study members.**
-  * **ask mousing to keep studying for loop, function and class next week.**
+  * [x]  **Ask mousing to open about_python repository in GitHub and allow me to commit and push on it.**
+  * [x] **Summary today’s curriculums and share it with study members.**
+  * [x]  **ask mousing to keep studying for loop, function and class next week.**
   * It will be helpful to practice for loop for my future. #backlog
   * It will be helpfull to practice file management methods #backlog
   * [x] opening and seeing each jupyter notebook takes huge effort and take time, so I think it's more efficient to upload jupyter notebook on github.
@@ -21,10 +21,10 @@ notebook: 3_pending_from_me
 
 ### summary
 
-----
-
+- 데이터 사이언스 스쿨 교재가 개념설명 및 예제가 부족해보여서 점프투파이썬으로 스터디 진행.
 - [for 문을 학습하였다.](https://wikidocs.net/20)
 - [while 문을 학습하였다](https://wikidocs.net/21)
+- [주피터노트북](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/aboutpython_basic_jumptopython_20170902.ipynb)
 
 ## 2017-08-26
 
