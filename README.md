@@ -6,10 +6,8 @@ notebook: 3_pending_from_me
 
 ## ActionItem
 
-* * *
-
   * **Ask mousing to open about_python repository in GitHub and allow me to commit and push on it.**
-  * **Summary today’s curriculums and share it with study members. **
+  * **Summary today’s curriculums and share it with study members.**
   * **ask mousing to keep studying for loop, function and class next week.**
   * It will be helpful to practice for loop for my future. #backlog
   * It will be helpfull to practice file management methods #backlog
@@ -19,18 +17,18 @@ notebook: 3_pending_from_me
     * [x] I've completed this activity. check `- how to upload files in local dir to remote repository` at the bottom of this document. 
 
   
+## 2017-09-02
 
+- [for 문을 학습하였다.](https://wikidocs.net/20)
+- [while 문을 학습하였다](https://wikidocs.net/21)
 
 ## 2017-08-26
-
-* * *
 
   * [I’ve learned ](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/about_python_basic.ipynb)[for loop](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/about_python_basic.ipynb)
   * [I’ve learned file management](https://github.com/sungyongkim/psygrammar_aboutpython_psychopy/blob/master/aboutpython_psychopy/aboutpython_psychopy/setup.ipynb)
 
 ## 2017-08-13
 
-* * *
 
 ### aboutpython_basic
 
