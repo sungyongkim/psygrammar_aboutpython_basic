@@ -19,6 +19,10 @@ notebook: 3_pending_from_me
   
 ## 2017-09-02
 
+### summary
+
+----
+
 - [for 문을 학습하였다.](https://wikidocs.net/20)
 - [while 문을 학습하였다](https://wikidocs.net/21)
 
