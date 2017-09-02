@@ -1,0 +1,4165 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 194,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "992d529f434e444fbecbedca18a24ec1"
+   },
+   "outputs": [],
+   "source": [
+    "# must enable \"Python Markdown\" nbextension\n",
+    "counter_chapter = 0\n",
+    "counter_section = 0"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "689c0279d65d483e8cafcbebc988e92c"
+   },
+   "source": [
+    "# 데이터 사이언스 스쿨 (파이썬 버전)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7949417a7ea746cbbd11dec1fc92b3eb"
+   },
+   "source": [
+    "## 들어가며"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 195,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "c7f39d2ca216486495c65ba13a77e9eb"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3af2d3b94d184225904c87fe54f8b992",
+    "variables": {
+     "counter_chapter": "1"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 데이터 사이언스란"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 196,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "e362af80c478465f9aad4ee4827aa6f3"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fea21618fbf44514a4abe50f4c7f023e",
+    "variables": {
+     "counter_section": "1"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절:  데이터 사이언스 학습 안내"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "02f460e1eeb3460099bac10dd6dcfc5c"
+   },
+   "source": [
+    "[[school_notebook:18d0a33495a94396b5eb1c1253b5c16d]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 197,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b29e18a686d348a2b0436f174346253d"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b2c7222f76894fae91b188252f37a59f",
+    "variables": {
+     "counter_section": "2"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 데이터 분석이란"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4c4223c034a74909b388ac6abf67b6c2"
+   },
+   "source": [
+    "[[school_notebook:d67e9751b6ff463582aa4cc6d4f5b5e3]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d09640f1de8e4cb3a66ad9f2b0f2dba2"
+   },
+   "source": [
+    "## 1부: 프로그래밍"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 198,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "472772660138472babee0d6c4f518ac7"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1325d780170a4955b4b5eccd21dd07c7",
+    "variables": {
+     "counter_chapter": "2"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 데이터 분석 환경"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 199,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "8bc464a91bca44b88219af21294f660b"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "90bffd6143724157a04aebef8d848ead",
+    "variables": {
+     "counter_section": "3"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절:  데이터 분석을 위한 환경"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "02f460e1eeb3460099bac10dd6dcfc5c"
+   },
+   "source": [
+    "[[school_notebook:e87bcccf2b6f4c1cae18fb3fdf7ed4a8]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 200,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "525ac933ce57478191bc98ebad1e409a"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7b2dc94f244a4ff49c426eb14227b8e8",
+    "variables": {
+     "counter_section": "4"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 도커와 리눅스 사용법"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "09d05000f67d49da907a1d98a5775498"
+   },
+   "source": [
+    "[[school_notebook:26ca8377076541b2b514cd5ed97c554d]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1258e639c94b4cbc8288ed257255f0df"
+   },
+   "source": [
+    "[[school_notebook:22cc3845d45f4dc7b27828294fce3c93]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1843a256fe87480ca19394facdcd1652"
+   },
+   "source": [
+    "[[school_notebook:c792824fa32443bca59ba59285c62228]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "666d4fb8ffce41c5abc0668eae125842"
+   },
+   "source": [
+    "[[school_notebook:03c5b5a96a614ee588a74f05c720e67c]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "818029cae97f48e9b84a3cc563c1aadb"
+   },
+   "source": [
+    "[[school_notebook:708e711429a646818b9dcbb581e0c10a]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "21f57aae382d44ab8d3c0107183d6c9d"
+   },
+   "source": [
+    "[[school_notebook:d4c6429bb79d4fba9e3a5397da197798]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 201,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "7bf5b1ca92cb44459d9c8c3d83acf3cd"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7140a553f270444baebb8a478d5238ba",
+    "variables": {
+     "counter_chapter": "3"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 파이썬 프로그래밍 시작하기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 202,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "d42c7c5d3f054c8595b6f2c2a53c9896"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "78a80bef72164734831c2028739eb6f2",
+    "variables": {
+     "counter_section": "5"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절:  파이썬 설치와 사용법"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d2e91038bf824a27b0be14215442e549"
+   },
+   "source": [
+    "[[school_notebook:5e52b7c4b5754f2585844c8d9b26cdb5]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c7e08afe1f4f40a3bd2be8785f7af501"
+   },
+   "source": [
+    "[[school_notebook:ab78f919fdb84e838039c674acba5650]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ce134c2eee544834b39364b5ea6a1b3a"
+   },
+   "source": [
+    "[[school_notebook:b85212ea4040408e8ebd6d3495f2c91b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1c8ef8c2d2f54badbf32b74552dfa0ef"
+   },
+   "source": [
+    "[[school_notebook:21b069aa5f3043cfb2ab0d15d7f7561e]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "aab9ded978cf488b81379242e2d1846f"
+   },
+   "source": [
+    "[[school_notebook:5a3b9aaade8545c38ab4b888dd9516d4]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1c8ef8c2d2f54badbf32b74552dfa0ef"
+   },
+   "source": [
+    "[[school_notebook:7fc94251f6fb492c9d3f94c6cab7742d]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 203,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "c61df904856e4132808baf519acdbae9"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e770f94266b349d39df89b5446a22c30",
+    "variables": {
+     "counter_section": "6"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절:  파이썬 기초 문법"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:d34cda78eb5c46deaacb394a9311c061]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "71ec526339714df993ea34486b488821"
+   },
+   "source": [
+    "[[school_notebook:148fc57f684c4dc48eeb5048ab0d45f2]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:ddebe9929d4047409e16c9e6f06f1ed4]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "33059293de6a49579438cc6189a8bd38"
+   },
+   "source": [
+    "[[school_notebook:cb85192c4c734d98afcd3d6027dd57b6]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:1fa1afd6176848d7874f594dec2a7bc7]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:b368c42a39634c9784e9dda0c4318543]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:71f095ff7405476c9b5525357b24c0d1]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:f50da28051c84db08a8af6c92e813888]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:3f4fc70d7648427e93321c65a7b2933f]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:b7db5062d333474ca700f1c5f63e3979]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:94281f9cd29b4e9e97ab82e5f6f07e15]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:6def52f325be4168bcae61a5a7e367ad]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "435cf703ea3a402ea3187b40b73b59c7"
+   },
+   "source": [
+    "[[school_notebook:3ed4a1e949f14ff08bcf773705afee8e]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:4ed10a0ab51d41539ca2e52eed9b5a8d]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:fdbe01932ce74b7983f1862a56e32104]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:c6e304b364484f8eb383061f2c6a6ebe]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6210c0d43a1c44d59918ba80d38e645f"
+   },
+   "source": [
+    "[[school_notebook:a55f4411a7c641eebbd377f6292eef52]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "122a7463a6cf4441817f15fdfb481709"
+   },
+   "source": [
+    "[[school_notebook:465066ac92ef4da3b0aba32f76d9750a]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "185915d9762c4341becf527fadf113e6"
+   },
+   "source": [
+    "[[school_notebook:250c1869eab54157827adf54c5e9f064]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 204,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "d747ae57c09f483995bf28417b73ff81"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f2e4a858c700443baf51ec84424298b1",
+    "variables": {
+     "counter_chapter": "4"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 파이썬을 이용한 데이터 분석"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 205,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "ede2d1516d7b4597ba5ee6dd9627018b"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b445f68a5a8f430f83f7c44c1c094ac0",
+    "variables": {
+     "counter_section": "7"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: NumPy를 사용한 벡터와 행렬연산"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "59cdf1a688d048d7b3b986bcf1b644d6"
+   },
+   "source": [
+    "[[school_notebook:35099ac4aea146c69cc4b3f50aec736f]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "387c178e55fe44c69e6e74df498f4132"
+   },
+   "source": [
+    "[[school_notebook:17608f897087478bbeac096438c716f6]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5692dc85ef8442d9b5a98ddc3951a576"
+   },
+   "source": [
+    "[[school_notebook:464860bf5a5f4e139b05ccc473f1f15c]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 206,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "0d34551ec99a4613b73d1175fed071d8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "8a05940559af4289ab42f59b2a139fd5",
+    "variables": {
+     "counter_section": "8"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Pandas를 사용한 데이터 탐색"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ce74c9e07334423794559b1ba10b9c6d"
+   },
+   "source": [
+    "[[school_notebook:ee0a5679dd574b94b55193690992f850]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "787df3c772764d9497d146e3cc8f3774"
+   },
+   "source": [
+    "[[school_notebook:c5ccddd6716042ee8be3e5436081778b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fbfe381ae4254fa4af6fccd02347dc16"
+   },
+   "source": [
+    "[[school_notebook:704731b41f794b8ea00768f5b0904512]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "787df3c772764d9497d146e3cc8f3774"
+   },
+   "source": [
+    "[[school_notebook:aa62265f02fc429aa636ef343c3b1fda]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fbfe381ae4254fa4af6fccd02347dc16"
+   },
+   "source": [
+    "[[school_notebook:a49bde24674a46699639c1fa9bb7e213]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "787df3c772764d9497d146e3cc8f3774"
+   },
+   "source": [
+    "[[school_notebook:7002e92653434bc88c8c026c3449d27b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "380f71dd94b547d381e395ce95ab9ea0"
+   },
+   "source": [
+    "[[school_notebook:1ce4880f58504891b8ab8550fe894a51]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9adcbd4a123b4a0499df08b3f085d80e"
+   },
+   "source": [
+    "[[school_notebook:76dcd63bba2c4959af15bec41b197e7c]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9adcbd4a123b4a0499df08b3f085d80e"
+   },
+   "source": [
+    "[[school_notebook:8959673a97214e8fafdb159f254185e9]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 207,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "f089e90a84234dc5ac7735d4a243f5c8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d8c3f6352df846a7a938c3fd7ec66b17",
+    "variables": {
+     "counter_section": "9"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Dask를 사용한 빅데이터 탐색"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "35dc1a7ac3e24d6799d091e320065b53"
+   },
+   "source": [
+    "[[school_notebook:2282b75b2a63448087b77269885c27cb]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 208,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "85d047810df04dc7a07444d39b3663d1"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0b2453753ad44921ab565a59629b19a6",
+    "variables": {
+     "counter_section": "10"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Matplotlib를 사용한 시각화"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "41e2a9b2f76a499688b81fc5c84e22ce"
+   },
+   "source": [
+    "[[school_notebook:d0b1637803754bb083b5722c9f2209d0]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "42c84b2b0d214c1498c9beb9c84c811a"
+   },
+   "source": [
+    "[[school_notebook:6e71dbff254542d9b0a054a7c98b34ec]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "42c84b2b0d214c1498c9beb9c84c811a"
+   },
+   "source": [
+    "[[school_notebook:5deb23973a0240beb510cc2cd3b2f43d]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "ca298541c4f44224b452df83cb906d98"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "33df0b9dcbc544dfbee72718c73c3181",
+    "variables": {
+     "counter_section": "11"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Seaborn을 사용한 고급 시각화"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4c4315a133d7410da44ce7dc611fe3ab"
+   },
+   "source": [
+    "[[school_notebook:4c2d5ff1caab4b21a708cc662137bc65]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 210,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "22eb761b45e8448bb18ac7f6de5c54db"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0d1563a838ec4f10a6c9ef56b0c3cc94",
+    "variables": {
+     "counter_chapter": "5"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 데이터 전처리"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 211,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "7d06b629ba00437e930d9d8ce059f812"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c7c248efddf94816a45331fa02024e31",
+    "variables": {
+     "counter_section": "12"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 파이썬을 사용한 문서 전처리"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "8233361d71a14c35be26491891eaa17c"
+   },
+   "source": [
+    "[[school_notebook:118731eec74b4ad3bdd2f89bab077e1b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7fd258723be6438aa0e0f0db9690adb9"
+   },
+   "source": [
+    "[[school_notebook:70ce46db4ced4a999c6ec349df0f4eb0]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b7fdfdb3771a4c268954bfcfe621f8f1"
+   },
+   "source": [
+    "[[school_notebook:3e7aadbf88ed4f0d87a76f9ddc925d69]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 212,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "7d06b629ba00437e930d9d8ce059f812"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c7c248efddf94816a45331fa02024e31",
+    "variables": {
+     "counter_section": "13"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 파이썬을 사용한 이미지 전처리"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5e5eda69569245b7a672cd8043192b68"
+   },
+   "source": [
+    "[[school_notebook:9db1c9a006d747478e6cb4069a567d85]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 213,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "7d06b629ba00437e930d9d8ce059f812"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c7c248efddf94816a45331fa02024e31",
+    "variables": {
+     "counter_section": "14"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 파이썬을 사용한 음성 전처리"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "704104327e78426f9b2d3c6d07d5b282"
+   },
+   "source": [
+    "[[school_notebook:691326b7f88644f79ec7ddc9f27f84ec]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "57dfcc0fc4414184bfb7b40ad8f20f28"
+   },
+   "source": [
+    "## 2부: 수학"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 214,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "22eb761b45e8448bb18ac7f6de5c54db"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0d1563a838ec4f10a6c9ef56b0c3cc94",
+    "variables": {
+     "counter_chapter": "6"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: NumPy로 공부하는 선형 대수 기초"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 215,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "bcea205c7dd44c998819d9bc29cb00d1"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "15"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 벡터와 행렬"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e8cdd96b8241448b9780221c5dc432a2"
+   },
+   "source": [
+    "[[school_notebook:cd600e9627cd4f16bc4f6078231ab28c]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e8cdd96b8241448b9780221c5dc432a2"
+   },
+   "source": [
+    "[[school_notebook:3f44cfdda2874080a9aa6b034c71d5ec]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2861b3d0f2c9446e97b1911565f4f9d3"
+   },
+   "source": [
+    "[[school_notebook:d6205659aff0413797c22552947aec83]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 216,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b3654928d21d47ea882e80c708ea01ad"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "16"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 연립방정식과 역행렬"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1fbf560c7a084ffaa5d9d7a00c5a3ee6"
+   },
+   "source": [
+    "[[school_notebook:927d7f7972dd434ead9d294169ae7f34]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 217,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "654ad0f0979b46b48268d183cb9ea58a"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "17"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 선형대수와 해석기하"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "739f6b849a4f48d9a4639a16869d7943"
+   },
+   "source": [
+    "[[school_notebook:dd1680bfbaab414a8d54dc978c6e883a]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 218,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "0a6a6720153c44f8bc49ad1cef9510ac"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "18"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 고유분해와 특이값 분해${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "84629b4f033740e4b856ad11c26cd3f3"
+   },
+   "source": [
+    "[[school_notebook:7fd58178d9e64be682058db7e024d8b5]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 219,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "bc2df9a0bab64032908a4a6bf507d095"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d99d9d2d2c1e40beb14e06587b677246",
+    "variables": {
+     "counter_chapter": "7"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 파이썬으로 공부하는 미적분과 최적화"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 220,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "2ce123e4730c4cffa64b297bf3ae16e8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "19"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: SymPy로 공부하는 미분과 적분"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5b78b8d271bf4ed19189c940004d743c"
+   },
+   "source": [
+    "[[school_notebook:6076dff5c5c942778d0dc6d349c24930]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e07e6cdb01b44bdfacc2c8f82fc12f5a"
+   },
+   "source": [
+    "[[school_notebook:5f5f4a966f9042efa43d711008df9c0b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e07e6cdb01b44bdfacc2c8f82fc12f5a"
+   },
+   "source": [
+    "[[school_notebook:c970d15a74d24656988c8f020e96ce45]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 221,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b4f6969687374dc99ed288b4fc9e65a4"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "20"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 행렬의 미분"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e90c97e101ce4638b69bbe189e621e04"
+   },
+   "source": [
+    "[[school_notebook:8595892721714eb68be24727b5323778]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 222,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "9fd62c5242314d2088d75682eea1491b"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "21"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: SciPy를 이용한 최적화"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "00b91ddbbd16468fb757188acbcaaa8b"
+   },
+   "source": [
+    "[[school_notebook:4642b9f187784444b8f3a8309c583007]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "00b91ddbbd16468fb757188acbcaaa8b"
+   },
+   "source": [
+    "[[school_notebook:0c66f1810445488baf19cac79305793b]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 223,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "c4852c20b2074d569b34c270afbdee76"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fedde916044b424c8cda1bb76bea7b35",
+    "variables": {
+     "counter_chapter": "8"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 확률론 기초"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 224,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b22ebc1ad06943e087c80c4fb6df15a8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "22"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 확률의 정의와 특성"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3162f7d093a440e8a7181c6ca7b717fe"
+   },
+   "source": [
+    "[[school_notebook:9341c66303174eea9d35b2e4b6981ed9]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0cd84ba9d64d4f81bf6c0623c172df00"
+   },
+   "source": [
+    "[[school_notebook:9605664e26a0411b88f60e4ba9521dd9]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d04f549467c149cbb0ea7027b02390f0"
+   },
+   "source": [
+    "[[school_notebook:d410ba427b5f456289ca1dd64ad2b0c5]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 225,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "027042d55db84f7690078b35c6085d7d"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5839cacbe97246b2af451fedef9822b2",
+    "variables": {
+     "counter_section": "23"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 베이즈 정리"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "29e97ff60e8548a6af0fbbf6402a79ba"
+   },
+   "source": [
+    "[[school_notebook:f77e7d3f59b8437181dff01a88520f09]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f53a964f74e2454a937b05c465c24159"
+   },
+   "source": [
+    "[[school_notebook:f68d16df9ea448689ae66dc2140fe673]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "04ae2b026a324ecfa26e5d7dbf119174"
+   },
+   "source": [
+    "[[school_notebook:165cbb986f2c443ba7bac9ec83659b46]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2a7e393b9a104f7f8b16bb79de37a9a9"
+   },
+   "source": [
+    "[[school_notebook:e343b95bd3b740da9d966af0e6cc56a1]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 226,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "0b20f66af3d543cfa7d99e24a71202d2"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "24"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 확률변수와 확률밀도함수"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e4492773590043a18e3734a90900f502"
+   },
+   "source": [
+    "[[school_notebook:56e7a25aad2a4539b3c31eb3eb787a54]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9805e1ef89b64e02a8c4327b830b6c9d"
+   },
+   "source": [
+    "[[school_notebook:4bcfe70a64de40ec945639236b0e911d]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "71b9707ef7464e4d90da4c8c3510a091"
+   },
+   "source": [
+    "[[school_notebook:c46ce2d2a60d48edbc7c3e6e71394c26]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 227,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "390e1f6ca2f2465fbc8e033421913968"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e3a54befd7bc492e93424b1a30348329",
+    "variables": {
+     "counter_chapter": "9"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: SciPy로 공부하는 확률변수"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 228,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "ebf1ac8859fa4a14b285c09340c774b0"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "25"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 난수발생과 카운팅"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c7f4a20eaa7846518e58fa1316da3fee"
+   },
+   "source": [
+    "[[school_notebook:8bf41f87a08b4c44b307799577736a28]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 229,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "1c2f12dd2fb04304afc9ba4665805798"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "26"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: SciPy의 확률분석기능"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b234363f09f74367bf1a834da9d379d1"
+   },
+   "source": [
+    "[[school_notebook:e6c0d4ff9f4c403c8587c7d394bc930a]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "24e3c3cdb48f4a55b246b256cc85862f"
+   },
+   "source": [
+    "[[school_notebook:dd6a7633d69f401bb00409b9ae8806e8]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "efc3f99c3943414f8f4b1496158fb162"
+   },
+   "source": [
+    "[[school_notebook:b9dcd289a49546ffacfdc5f5bc9a2fc0]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 230,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "22045af151ec49c496945d85402c86ad"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "27"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 베르누이 분포와 이항 분포"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b234363f09f74367bf1a834da9d379d1"
+   },
+   "source": [
+    "[[school_notebook:5e2ee247518f47a6ba2d0894b33c73a3]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b3281b6c495f45bbb21d6d6d5a8cae48"
+   },
+   "source": [
+    "[[school_notebook:ddb0f7906b6146e09f5c1e633b4fbe3a]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 231,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "0a5e4b71bf074eaa95d841666e336cc3"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "28"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 정규 분포와 스튜던트 t 분포"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9b9e3e87f1574bdc8b58192e656f34b8"
+   },
+   "source": [
+    "[[school_notebook:76acc92d28354e86940001f9fe85c50f]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "cd91344441234cbea03dad4ccec66c09"
+   },
+   "source": [
+    "[[school_notebook:8956e37db86c44b3b1b3a4c3357e590c]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 232,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "a4bf3c7142cf48e2bda00690e79c51b6"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "29"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 카이제곱 분포와 F 분포"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4b34df3b7ba8432bbc8178d9d22d5944"
+   },
+   "source": [
+    "[[school_notebook:683cfb97b17041f3a9a0e6cbee5f1fef]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c4e135b3006d4603a61350d012e48d46"
+   },
+   "source": [
+    "[[school_notebook:38dd519067f249afa6d6285591b0ee61]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 233,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "85a826571a4346e7947b5c126345d59b"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "30"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 베타 분포와 감마 분포${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "8a6ab19af3cd4565becd24766dcab151"
+   },
+   "source": [
+    "[[school_notebook:70a372b9c14a4e8d9d49737f0b5a3c97]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5e85756b58e849b08bf5069a6b23fc6b"
+   },
+   "source": [
+    "[[school_notebook:1507654ffe9c4174b5d971e6f0efc84c]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 234,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "877dd180d47d44e681fa7363ce87553f"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "31"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 카테고리 분포와 다항 분포"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "60507756fed24e6c8fcb3dce802a3614"
+   },
+   "source": [
+    "[[school_notebook:354eb1d0e307423697ed805df07b96a5]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f71c895c3dbd4290bcb7d3d3b7772128"
+   },
+   "source": [
+    "[[school_notebook:ab191449d60542edadaae91bc12deb99]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 235,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "97f9616009984b72b5b2ea22e47b6ef8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "32"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 디리클레 분포${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3b30326f3ec8454fa8862858eaebc485"
+   },
+   "source": [
+    "[[school_notebook:e0508d3b7dd6427eba2d35e1f629d3de]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 236,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "74165747aba544a78ac87dc7167ea912"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "bf86889eb44244b6827f2197ddf49e3b",
+    "variables": {
+     "counter_chapter": "10"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 확률변수의 상관 관계"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 237,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "bcf810be8d444552a7867382de031149"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "33"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 결합확률과 조건부확률"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3191061551d048f6b3b4a10c5e5c2506"
+   },
+   "source": [
+    "[[school_notebook:e5c379559a4a4fe9a9d8eeace69da425]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3191061551d048f6b3b4a10c5e5c2506"
+   },
+   "source": [
+    "[[school_notebook:e08074f293144eeca9cc7251b5d5666c]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 238,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "557dbb7966054f35b677fad90081dfc8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "cf0a28de89304c6781b0c939fa597058",
+    "variables": {
+     "counter_section": "34"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절:  독립과 상관관계"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "41ce11037f9a476dad5509480707bc37"
+   },
+   "source": [
+    "[[school_notebook:ca281bee587b42378cd73d8ae1d42b37]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "23e957f04ce54c77804912f14bf84d26"
+   },
+   "source": [
+    "[[school_notebook:4cab41c0d9cd4eafaff8a45f590592c5]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 239,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "5c68dcb5c8df46a7817113e880cffc93"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4bc0596435ed4107bcea5479887e7178",
+    "variables": {
+     "counter_section": "35"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 다변수 가우시안 정규 분포"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a2ab8b9ecbd94783afedc6f519c5c856"
+   },
+   "source": [
+    "[[school_notebook:178adb41ee8141da83f1ba467e454ee2]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 240,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "74165747aba544a78ac87dc7167ea912"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "bf86889eb44244b6827f2197ddf49e3b",
+    "variables": {
+     "counter_chapter": "11"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 검정과 추정"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 241,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "0487f73762134dac9a64e41ac267ee6f"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "96b40cd31d574437934e535f1bc09b4f",
+    "variables": {
+     "counter_section": "36"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 검정과 유의확률"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "8b25fff1afd64a39b8874a57056b9a01"
+   },
+   "source": [
+    "[[school_notebook:87b67dafd7544e3380af278ff4f22d77]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a3f9cccf44964fb89722bcd4c2c574fa"
+   },
+   "source": [
+    "[[school_notebook:37a330dfc8de45e9ba475cbbd201ab53]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e8f202128311406189decb07cb155c7c"
+   },
+   "source": [
+    "[[school_notebook:14bde0cc05514b2cae2088805ef9ed52]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 242,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "6db746f10a664b22b5c22972072d3497"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2acb6772123748dc8c987117be887ba1",
+    "variables": {
+     "counter_section": "37"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 최대 우도 모수 추정"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1a6ab4b161924c2999c303042dd7930c"
+   },
+   "source": [
+    "[[school_notebook:d2bdfc87a7be487c96a8d946e8de3e9b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a3d2212adf81493599b27ffc269ded53"
+   },
+   "source": [
+    "[[school_notebook:864a2cc43df44531be32e3fa48769501]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "80a677ca2dfc4737ae28ea17fd4f7d6d"
+   },
+   "source": [
+    "[[school_notebook:f69960ede82f47b7a72b03b40aaa452c]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 243,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "61d27345fb1b4efa88126dfbe05eb473"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "48de039f09e543ebaf911e68bd5e2d84",
+    "variables": {
+     "counter_section": "38"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 베이지안 모수추정${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "8d04feabaa7b4fd5ab8702f6768ea5b6"
+   },
+   "source": [
+    "[[school_notebook:ae35a40deb884cf88e85135b4b5a1130]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "08aea19f370e4a979b38303b7a12bbc7"
+   },
+   "source": [
+    "## 3부: 통계분석"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 244,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "74165747aba544a78ac87dc7167ea912"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "bf86889eb44244b6827f2197ddf49e3b",
+    "variables": {
+     "counter_chapter": "12"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 통계분석 및 머신러닝 패키지"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 245,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "df8d2c569541400e94a805c05ca1d1b0"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "55b4a3aa399e4f1f8f1c2b560873b682",
+    "variables": {
+     "counter_section": "39"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: StatsModels 패키지 소개"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d9b6c433005442f2bb6e7e2dc19c2a4a"
+   },
+   "source": [
+    "[[school_notebook:77ee0e1bb6754ad89e0da14c6d461953]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ce76a52f9bd948a9b42852a64ec15b6b"
+   },
+   "source": [
+    "[[school_notebook:3219ec0e239041098d636674d4329696]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 246,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "e10af412d1fa4df4a419b52d0b58e63e"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fcd340eae1f541bfa1673af3274e4b50",
+    "variables": {
+     "counter_section": "40"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Scikit-Learn 패키지 소개"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7e56c4febc334ad191798daffd57068b"
+   },
+   "source": [
+    "[[school_notebook:293ece8b0d124fbaa4d4d52bb8f1cb42]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0eac16d95bc54381b1b60a8a42ccd8ca"
+   },
+   "source": [
+    "[[school_notebook:e6bd77468ab345639c6ecccf4a24a838]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9a898fefd88e4b30a2d31b358a0bc721"
+   },
+   "source": [
+    "[[school_notebook:4b948c4d99c94213bf02bcff2ced88eb]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "43cea6b92dcf4116a326c44d93b63da5"
+   },
+   "source": [
+    "[[school_notebook:577a01e24d4f456bb5060da6e47054e1]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4ffaad38606c48229dc36d203e0fda25"
+   },
+   "source": [
+    "[[school_notebook:0224ae9672eb4ab789c395a2ca2335e9]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b98ebcd6cec44acf83d174e7ab65bfc7"
+   },
+   "source": [
+    "[[school_notebook:ec26c797cec646e295d737c522733b15]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a16e544f46e044d9921b68e66edae7d1"
+   },
+   "source": [
+    "[[school_notebook:f43be7d6515b48c0beb909826993c856]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 247,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "dddc3642e6b241c99057476889e28be2"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6ec8266113b54036b4496cc0dd77423d",
+    "variables": {
+     "counter_chapter": "13"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장:  Unsupervised Learning"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 248,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "e904cb1436654f15b4d728d6d6daabb1"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "41"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 주성분 분석"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "29d13c358a144b87ba5a4881b08d1045"
+   },
+   "source": [
+    "[[school_notebook:f10aad8a34a4489697933f77c5d58e3a]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 249,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "1d031f43f2d445bab1e1863f3844e596"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "42"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 클러스터링${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ce6cdaec96a44de1809c2b2c125f592c"
+   },
+   "source": [
+    "[[school_notebook:2205ad8f0c5947c08696e8927b466341]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6922c4c46d9343f094e2f98af3057eba"
+   },
+   "source": [
+    "[[school_notebook:3bd9864b09d0466995134220f6779d6d]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "63a833865f0047fea8e2c12a7ee0c97f"
+   },
+   "source": [
+    "[[school_notebook:094bcb7b86574711a2e8d81f26bce2f5]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 250,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "c3dcd23edb9840e494fdd3eb67c429da"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e6df00ed65ea4a62ab4875d9bac8fb06",
+    "variables": {
+     "counter_chapter": "14"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: StatsModels로 공부하는 회귀분석"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 251,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "f6154822e7a24a2eaff098af0a27f51f"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5c480a16a42b4ab5bd409e8d80966164",
+    "variables": {
+     "counter_section": "43"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 선형회귀분석의 소개"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "99af832db6324380a86a793ba11b6964"
+   },
+   "source": [
+    "[[school_notebook:58269d7f52bd49879965cdc4721da42d]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 252,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "4cb9e7d7a291421090c4542086ae1ab7"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "11ed2c794bb941ba81caa188c50a907d",
+    "variables": {
+     "counter_section": "44"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 아웃라이어"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a8a6720ba87444d6b7189e378fefc09c"
+   },
+   "source": [
+    "[[school_notebook:6d9c833f132e4e789e35632b49be2c2d]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 253,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "623435b3c223494e8a44bbfe5bb2c794"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "af910e6549744eef8530226e82fa16ad",
+    "variables": {
+     "counter_section": "45"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 확률론적 선형회귀모형"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b05f057352ec490c9a6419261e4dcde8"
+   },
+   "source": [
+    "[[school_notebook:743cdedec523447a907b2b0abda45533]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 254,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "a5830b9985ae47c2b40d326bb7c91b23"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f0e1bbf1d04f490fa142611e14e22ee1",
+    "variables": {
+     "counter_section": "46"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 입력변수가 카테고리값인 경우"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d1775230a61749f1bc966638d9d63ac2"
+   },
+   "source": [
+    "[[school_notebook:c642f2d81d134c9f9b6e3b88135a3393]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4485174922a842b1a7147531510f8c20"
+   },
+   "source": [
+    "[[school_notebook:7dda1bc9ad1c435fb309ea88f672eff9]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 255,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "542c8c20e2bf4c98a932d266563408cf"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6240d03bc3644091b821cf2d94c6a5aa",
+    "variables": {
+     "counter_section": "47"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 예측성능의 진단과 비교"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5110882694ab44028bd757f474bed9d7"
+   },
+   "source": [
+    "[[school_notebook:a60e97ad90164e07ad236095ca74e657]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9c80c96f7dfa49f7bbdb779a9de95c5e"
+   },
+   "source": [
+    "[[school_notebook:2787ec5d30664dea850fe0a940e5c1e4]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "223f3732059f47a68ac82449a2597f26"
+   },
+   "source": [
+    "[[school_notebook:bfe4438b46674c68a5ba6598147a5527]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 256,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "73c84ae3f65d4a9ea1af7570e69089aa"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4951001225c44fb2979776e057e4ff7f",
+    "variables": {
+     "counter_section": "48"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 다항회귀와 과최적화"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f5dd627d51dc495eb7334bd21b963571"
+   },
+   "source": [
+    "[[school_notebook:ff9458c7156c4961b012c60e5fc97301]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 257,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "f7d293a2a95b46c690e93ad117598ee9"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "22f54800593245e7b3d2b8bc218b7e10",
+    "variables": {
+     "counter_section": "49"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 교차검증"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "14b1f6a36d7c40ee8c24ea42b50716a7"
+   },
+   "source": [
+    "[[school_notebook:266d699d748847b3a3aa7b9805b846ae]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 258,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "88d4123febff4371b514d314e4136af4"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "25e2278777ae4887bad1bb1e57ff7df7",
+    "variables": {
+     "counter_section": "50"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 정규화와 모형 최적화"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "663e3e740eb543c29b5bf6b4c389d92f"
+   },
+   "source": [
+    "[[school_notebook:83d5e4fff7d64cb2aecfd7e42e1ece5e]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "971f61a59fb149d589581f7784c71ee4"
+   },
+   "source": [
+    "[[school_notebook:db3f627fa93e4e3bb1001de86465f783]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 259,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "73c84ae3f65d4a9ea1af7570e69089aa"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4951001225c44fb2979776e057e4ff7f",
+    "variables": {
+     "counter_section": "51"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 다중 공선성과 변수 선택"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 260,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "dddc3642e6b241c99057476889e28be2"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6ec8266113b54036b4496cc0dd77423d",
+    "variables": {
+     "counter_chapter": "15"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장:  추천 시스템"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 261,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "befd7aceb78b427783ccf134e75127a6"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "52"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 추천시스템${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2778cb05f8574060ae5f179ba43d17f6"
+   },
+   "source": [
+    "[[school_notebook:fcd3550f11ac4537acec8d18136f2066]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 262,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "dddc3642e6b241c99057476889e28be2"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6ec8266113b54036b4496cc0dd77423d",
+    "variables": {
+     "counter_chapter": "16"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장:  StatsModels로 시계열 분석하기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 263,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "cbad8dbdfa234e0fbee81c78ff3ffbc8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "53"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 확률 과정"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:77e0ff1a3ed94d12afcc39ea3d1248d5]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:0ddd47967585403ab8b4cb60d0e420f6]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:6b963e771dc54f8c8cb23437274a86d6]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:999cc951faec406dba37eae7b63720e5]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:d5226389a8414583a45fb47e1e1cf6fb]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 264,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "867e9a3315104e6a93810672a2f0c5a2"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "54"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: ARIMA 모형"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "10bcdf1fa38b4c5d9ed48fc5843e791f"
+   },
+   "source": [
+    "[[school_notebook:ac028b39585e4d0bac57d5e2f5cd5ccd]] "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:f1b89d145ef14bca8e5b6f1800985d52]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:64a96000aec2494a98d19bd7c26c616a]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:e880ecd416554dbf84db6a3e8f426b99]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:f4e9ec14b4d14261bdf4a24eeaefbab7]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:9cbbfed6d6f34f02a2cdaa422706be91]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:ca094b6cae2142e6a35c2e62754d5cb9]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:ebb638fc880145b9adeef8dfa630f067]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4d8ea8ef2ce04344bce139fe665957f0"
+   },
+   "source": [
+    "[[school_notebook:57c41426b519403e873e3c13ec024bfd]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "04e595b7f8d745dc94074d30aea5fad7"
+   },
+   "source": [
+    "[[school_notebook:602e62fc1c544ffcb43c2c7e1484dc14]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 265,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "d32d0a8fa83a4d90ace6a6a5ab4fba1e"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "55"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 모형의 추정 및 진단"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:e4b52228ac5749418d51409fdc4f9cef]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:240b62a8927043c79b5384536e42f99d]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:12c6c314797c4c438d06e5cf4d290840]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:8030f5931c1b4cf68a46c2a194b3a1c6]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:b39ccd2da3e64d6e91981e23e01816c4]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:ac028b39585e4d0bac57d5e2f5cd5ccd]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:1a8a1c03103543168bdd43f780e7dbfe]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "51433b6d99fc443c8b6cb0ef5dd86a27"
+   },
+   "source": [
+    "[[school_notebook:3ea68ac37aa846e58a8c330aad0bdbd1]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9e52f9e23df242f792067bbd6f7872e7"
+   },
+   "source": [
+    "[[school_notebook:8c4f6ad9487149ca872374bbbf098e5f]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 266,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "c9543f3225884da2bac7d0fa258cf0bb"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "56"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 상태 공간 모형과 칼만 필터${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "15a7f4a6494b410dad306ca1da9bf357"
+   },
+   "source": [
+    "[[school_notebook:10b88dc8f542452b882165611570d4da]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4786e403791b4cdfb25e28cce0d21a7f"
+   },
+   "source": [
+    "[[school_notebook:c645d51f308b4047aa78e8b343a2e181]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "93641e986a634579a968e053103f29c1"
+   },
+   "source": [
+    "[[school_notebook:fd4f77324884499e90be5849f9610ce9]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b39f7d8e1acd42628751385db7e39734"
+   },
+   "source": [
+    "[[school_notebook:bc0cb7be92c14f3f8023a978d86425d3]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fa3ef36875b44f65aebfba7724b78540"
+   },
+   "source": [
+    "[[school_notebook:e10476b1a68a49388eef1c140ff1d11f]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1dedf05991c34bd8935948aa63fbc3b3"
+   },
+   "source": [
+    "[[school_notebook:d18fae471dd5463bb5fc06d24dabfdc9]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "54d823e205054d2785579d07ed416a05"
+   },
+   "source": [
+    "## 4부: 머신러닝"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 267,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b454191c36024e24bd490a89692660a4"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "28ae39fb5ced4be7abc7f2fe1d0b8214",
+    "variables": {
+     "counter_chapter": "17"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: Scikit-Learn을 사용한 머신러닝"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 268,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "faf06152101f4595905a0b661fba71a5"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "57"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 분류의 기초"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3d53b5fd60aa485f8db9bf077c70637b"
+   },
+   "source": [
+    "[[school_notebook:e2790743099742a396cfa4955ffc8a1f]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "9d6195ced06a442faddab2a796225be0"
+   },
+   "source": [
+    "[[school_notebook:7a6b958e9d51451689138cca93a047d8]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a98d61039f1746af977b056a50e11fae"
+   },
+   "source": [
+    "[[school_notebook:731e0d2ef52c41c686ba53dcaf346f32]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 269,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b42f2fed4ff44734b03c80428fe5f64e"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ac3532e63b25410981fa56056adaba8f",
+    "variables": {
+     "counter_section": "58"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 로지스틱 회귀분석"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e0bef974c6fc4032ba5434853aa343e6"
+   },
+   "source": [
+    "[[school_notebook:d0df94cf8dd74e8daec7983531f68dfc]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 270,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "b6c57fee4da943a38dd0d70af0b76cad"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "59"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: QDA와 나이브 베이즈 모형"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2d5dcd7f28b94a2f8900a02b203774ce"
+   },
+   "source": [
+    "[[school_notebook:2c6a8e003219446995f3d866ac8a6fd1]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "41c6b11dcf3544d38f6768ddfd12ebfe"
+   },
+   "source": [
+    "[[school_notebook:c19b48e3c7b048668f2bb0a113bd25f7]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c8ebdd3b19e6461db19c7d9a4d8c811e"
+   },
+   "source": [
+    "[[school_notebook:3387abe1784248339e418835297e17d2]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 271,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "c0964607a5b34b71969308191ff2e634"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "60"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 의사 결정 나무"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ec01aa079ddc46c193c9864211d81a34"
+   },
+   "source": [
+    "[[school_notebook:583f056ecca24bf78e6850af1439a104]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a5501a2ea5874ef4812565294b9db63f"
+   },
+   "source": [
+    "[[school_notebook:d3ecf5cc7027441c8509c0cae7fea088]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ec62316a20134399bf8b0398a299da11"
+   },
+   "source": [
+    "[[school_notebook:16c28c8c192147bfb3d4059474209e0a]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 272,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "76a80a21cd064d97ae111f09346d5f1a"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "61"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 퍼셉트론과 서포트벡터 머신"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "523b7257f1464423ae03568cf1f3e0db"
+   },
+   "source": [
+    "[[school_notebook:342b8e2ecf7a4911a727e6fe97f4ab6b]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3f645fff3473443b8ba64f849c3426a3"
+   },
+   "source": [
+    "[[school_notebook:6c6d450cb2ee49558856fd924b326e00]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 273,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "621fbec9daf944788491213ad67e4667"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "62"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 앙상블 방법"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "76b5ce4b5b204b54a15afaad6caf1258"
+   },
+   "source": [
+    "[[school_notebook:766fe73c5c46424ca65329a9557d0918]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a6004073f09a4528bd3125414ed33adc"
+   },
+   "source": [
+    "[[school_notebook:7d82087c31d64fe491dc74e1d5953ca2]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 274,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "73b487750fae48fdb6c614505dae2a38"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "66bb88bdddd94c4aa25a464581b8a11f",
+    "variables": {
+     "counter_chapter": "18"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 신경망 모형"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 275,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "f71b2ce99cd8454997c9bbd45b2c673a"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "63"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 커널 서포트 벡터 머신"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "25725523fbce47f088baa1951297f881"
+   },
+   "source": [
+    "[[school_notebook:69278a5de79449019ad1f51a614ef87c]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 276,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "293756c69d374500a58564163642b5ff"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "64"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 신경망 모형"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "99e440e006e242a3a2dac899a9d5dbdb"
+   },
+   "source": [
+    "[[school_notebook:0178802a219c4e6bb9b820b49bf57f91]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 277,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "8dd7305a249142edb78b91abb26181a6"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "65"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Theano 패키지${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b7b748f8596c4b5cb24f5125cec833a3"
+   },
+   "source": [
+    "[[school_notebook:a7ce18eb02b54cbfa760636cc76a4640]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 278,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "0b5c80aa036c4badafc90508be326d00"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "66"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Tensor-Flow 패키지"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a3fb4a7eab2a48bd8b2c26825589ce1f"
+   },
+   "source": [
+    "[[school_notebook:5cbab09d777841f591a67928d7043f51]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 279,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "6832dd78138e4dd9bb2996e824a79b99"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "67"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: Keras 패키지"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "217fd4c2e70f42bdba3807674fe4e627"
+   },
+   "source": [
+    "[[school_notebook:51e147088d474fe1bf32e394394eaea7]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 280,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "eaf8534a2b2a476da895c4c8e422f99f"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "68"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 신경망 성능 개선"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b303b95bbc7e496e8c0c52c907c88c72"
+   },
+   "source": [
+    "[[school_notebook:f18248a467e94c6483783afc93d08af9]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 281,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "69e02cb72593449c87be90e5c1f40ed8"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "69"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: CNN"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e133618481e342ff803b403499b60915"
+   },
+   "source": [
+    "[[school_notebook:e2d30432911f4498b873232dd7d99cce]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4f5b490ccce142b2b3246c1da5282b68"
+   },
+   "source": [
+    "[[school_notebook:8fc58d2c1ffc420dac44eafee7b28cea]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 282,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "21d3e5be78494a3eb42ac0bb3ad31a74"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "70"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 확률론적 언어모형${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "217fd4c2e70f42bdba3807674fe4e627"
+   },
+   "source": [
+    "[[school_notebook:a0c848e1e2d343d685e6077c35c4203b]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 283,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "2ee1b02d2b454cbbb02326cac7ec586a"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "71"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 단어 임베딩과 word2vec${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "217fd4c2e70f42bdba3807674fe4e627"
+   },
+   "source": [
+    "[[school_notebook:6927b0906f884a67b0da9310d3a581ee]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 284,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "f8054752aabc43aab60fc9e8d236ef14"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "2660c92995fc4069860f869817772c6f",
+    "variables": {
+     "counter_section": "72"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: RNN${}^{\\ast}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "217fd4c2e70f42bdba3807674fe4e627"
+   },
+   "source": [
+    "[[school_notebook:1d93b9dc6c624fbaa6af2ce9290e2479]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 285,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "73b487750fae48fdb6c614505dae2a38"
+   },
+   "outputs": [],
+   "source": [
+    "counter_chapter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "66bb88bdddd94c4aa25a464581b8a11f",
+    "variables": {
+     "counter_chapter": "19"
+    }
+   },
+   "source": [
+    "### {{counter_chapter}}장: 모형 최적화"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 286,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "fa067a9b3e8243ea8e21f9d76e67e8ba"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "73"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 비대칭 데이터 문제"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "78e3e7e7b528479280639df8be74fdb5"
+   },
+   "source": [
+    "[[school_notebook:c1a8dad913f74811ae8eef5d3bedc0c3]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 287,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "fa067a9b3e8243ea8e21f9d76e67e8ba"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "74"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 모형 최적화"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "22bced814fad4d52b530cf8a502a836b"
+   },
+   "source": [
+    "[[school_notebook:ff4b5d491cc34f94aea04baca86fbef8]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 288,
+   "metadata": {
+    "collapsed": true,
+    "hidden": "all",
+    "school_cell_uuid": "fa067a9b3e8243ea8e21f9d76e67e8ba"
+   },
+   "outputs": [],
+   "source": [
+    "counter_section += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "803ba6006e4a431aa989169f2961debe",
+    "variables": {
+     "counter_section": "75"
+    }
+   },
+   "source": [
+    "#### {{counter_section}}절: 병렬/분산 처리"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e412cc228a9b4bb394c753875167a2d3"
+   },
+   "source": [
+    "[[school_notebook:0e9636f97c3d4b47b87a08b2ef0349b7]]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "28e4be12d41449e4b36fb7b9d0d14cbb"
+   },
+   "source": [
+    "## 교재 및 참고 문헌"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "df3d0ab7b4914e8aa11d5f39d795f31b"
+   },
+   "source": [
+    "[[school_notebook:ffb96882876643f4864eb9aabe21dd2e]]"
+   ]
+  }
+ ],
+ "metadata": {
+  "anaconda-cloud": {},
+  "celltoolbar": "Edit Metadata",
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
