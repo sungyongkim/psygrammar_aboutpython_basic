@@ -4,13 +4,12 @@ tags: ["aboutpython", "psygrammar", "psychopy", "github"]
 notebook: 3_pending_from_me
 ---
 
-## ActionItem
+## NextStep
 
-  * [x]  **Ask mousing to open about_python repository in GitHub and allow me to commit and push on it.**
-  * [x] **Summary today’s curriculums and share it with study members.**
-  * [x]  **ask mousing to keep studying for loop, function and class next week.**
-  * It will be helpful to practice for loop for my future. #backlog
-  * It will be helpfull to practice file management methods #backlog
+  * [x] **오늘 발표한 내용을 요약하여 깃허브로 스터디 멤버들에게 공유하여 본다.**
+  * [x] **무성님한테 담주 20170909에 for문과 함수와 클래스를 이어서 진행할지 물어본다.**
+  * [ ] It will be helpful to practice for loop for my future. #backlog
+  * [ ] It will be helpfull to practice file management methods #backlog
   * [x] opening and seeing each jupyter notebook takes huge effort and take time, so I think it's more efficient to upload jupyter notebook on github.
     * [x] [you should know how to upload folders or files to remote repository.](https://help.github.com/articles/adding-a-file-to-a-repository-using-the-command-line/)(If you don't know how to upload files with command line, then do it on github console until you know command line.) 
     * [x] [you should know how to upload files to a remote repository you want to upload.](https://www.evernote.com/Home.action?login=true&prompt=none&authuser=1#n=c1bcab42-6c06-4d2e-aa13-a7034ba8d1a6&ses=4&sh=2&sds=5&)
@@ -19,12 +18,34 @@ notebook: 3_pending_from_me
   
 ## 2017-09-02
 
-### summary
+### Summary
 
-- 데이터 사이언스 스쿨 교재가 개념설명 및 예제가 부족해보여서 점프투파이썬으로 스터디 진행.
+- while & if 문을 발표함.
+- 주피터 노트북의 개념과 cheet sheet를 학습함.
+
+
+### Action Items
+
 - [for 문을 학습하였다.](https://wikidocs.net/20)
 - [while 문을 학습하였다](https://wikidocs.net/21)
-- [주피터노트북](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/aboutpython_basic_jumptopython_20170902.ipynb)
+- [오늘 학습한 예제](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/aboutpython_basic_jumptopython_20170902.ipynb)
+- [김성근님이 주피터노트북의 개념과 cheet sheet를 발표해주심.](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/JupyterNotebook.ipynb)
+
+### Lesson Learned
+
+- **Good**
+ - 시간에 쫓기며 2시간 안에 끝내려 하기 보다는, 개념을 확실하게 학습하고 공유하자는 생각으로 거의 line by line으로 발표하여 스터디 멤버들로부터 긍정적 반응을 받음.
+ - 타스크립트를 호출해서 함수로 사용해서 좋았음.
+
+- **Bad**
+ - 발표할 내용을 따로 준비안하고, 진행하다 보니, 선택과 집중하여 발표하는 것이 다소 힘들었다.
+  - 사전에 발표할 내용만 추려서 진행하면 선택과 집중의 효율이 좀 더 좋아질 것 같다.
+
+- **Other**
+ - 데이터 사이언스 스쿨 교재가 개념설명 및 예제가 부족해보여서 점프투파이썬으로 스터디 진행.
+
+
+
 
 ## 2017-08-26
 
