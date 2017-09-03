@@ -15,6 +15,9 @@ notebook: 3_pending_from_me
     * [x] [you should know how to upload files to a remote repository you want to upload.](https://www.evernote.com/Home.action?login=true&prompt=none&authuser=1#n=c1bcab42-6c06-4d2e-aa13-a7034ba8d1a6&ses=4&sh=2&sds=5&)
     * [x] I've completed this activity. check `- how to upload files in local dir to remote repository` at the bottom of this document. 
 
+## 2017-09-04
+
+- [점프투파이썬 초기버전](https://wikidocs.net/90) : 재귀호출, lambda, map, filer, reduce에 대한 개념이 친절하게 설명되어있다.
   
 ## 2017-09-02
 
