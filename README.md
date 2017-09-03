@@ -26,7 +26,7 @@ notebook: 3_pending_from_me
 
 ### Action Items
 
-- [for 문을 학습하였다.](https://wikidocs.net/20)
+- [if 문을 학습하였다.](https://wikidocs.net/20)
 - [while 문을 학습하였다](https://wikidocs.net/21)
 - [오늘 학습한 예제](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/aboutpython_basic_jumptopython_20170902.ipynb)
 - [김성근님이 주피터노트북의 개념과 cheet sheet를 발표해주심.](https://github.com/sungyongkim/psygrammar_aboutpython_basic/blob/master/JupyterNotebook.ipynb)
