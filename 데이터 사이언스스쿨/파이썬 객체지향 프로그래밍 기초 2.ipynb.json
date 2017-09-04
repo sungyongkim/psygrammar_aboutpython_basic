@@ -1,0 +1,1061 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "ed1f3134dc4e4aca9a0053f9ff5352c7",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# 파이썬 객체지향 프로그래밍 기초 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "15c8baf37de24fa382266567060470e6"
+   },
+   "source": [
+    "이번에는 컴퓨터 게임의 캐릭터를 만드는 예제를 통해 클래스 상속(Inheritance)의 개념을 공부한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f340f16029414c7c9ac7aad1827ba89a",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 게임 캐릭터와 객체"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "83f51af0a2fa4900a4a3d37a6022b1cb"
+   },
+   "source": [
+    "컴퓨터 게임에 사용되는 플레이어의 캐릭터는 객체 지향 프로그램을 통해 만든다고 생각해 보자. 캐릭터의 능력치, 경험치 등의 숫자는 캐릭터마다 다르게 관리되어야 하므로 객체의 속성이 될 수 있다. 또한 모든 캐릭터 조작에 공통적으로 필요한 이동, 공격 등의 조작은 메서드로 구현할 수 있을 것이다. \n",
+    "\n",
+    "* 플레이어의 캐릭터\n",
+    " * 속성: 캐릭터의 능력치, 경험치 등\n",
+    " * 메서드: 캐릭터를 움직이는 방법, 이동, 공격 등\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7a92482f87bf4dff96483c21c708be1f"
+   },
+   "source": [
+    "이를 기반으로 캐릭터를 만들어내는 `Character`라는 클래스를 만든다. 이 클래스로 만든 캐릭터는 1000 이라는 life 속성값을 가지고 생성되며 게임상에서 공격받을 경우에는 `attacked`라는 메서드가 호출되어 life 속성값을 10만큼 감속시키고 공격 받았음을 표시한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "d0c62c060d7c457ea1d1952f6e2085f4"
+   },
+   "outputs": [],
+   "source": [
+    "class Character(object):\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        self.life = 1000\n",
+    "    \n",
+    "    def attacked(self):\n",
+    "        self.life -= 10\n",
+    "        print(u\"공격받음! 생명력 =\", self.life)    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d521c282dca34ffc8137bbdd6922c5b9"
+   },
+   "source": [
+    "이 클래스로 `a`, `b`, `c` 세 개의 캐릭터 객체를 생성한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "75f18b1a7b864dceb8d13b02277575c9"
+   },
+   "outputs": [],
+   "source": [
+    "a = Character()\n",
+    "b = Character()\n",
+    "c = Character()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "dc661ed0429645cdbfd07603b17982e9"
+   },
+   "source": [
+    "모든 객체의 초기 life 속성값은 모두 1000이다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "af55301c85cb42a89b31940fa8feed9c"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1000, 1000, 1000)"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.life, b.life, c.life"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d9fd0736e04844369f366148a24c8fc3"
+   },
+   "source": [
+    "하지만 공격을 받은 캐릭터의 생명력은 감소된다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "55b5d2351b51494ca09ab6eac66269d7"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 990\n"
+     ]
+    }
+   ],
+   "source": [
+    "a.attacked()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "fc64fd7432f9404192842ef2ca9383ff"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 990\n"
+     ]
+    }
+   ],
+   "source": [
+    "b.attacked()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "3dba58e2dd3a4872b537666e8fc20c2f"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 980\n",
+      "공격받음! 생명력 = 970\n",
+      "공격받음! 생명력 = 960\n",
+      "공격받음! 생명력 = 950\n",
+      "공격받음! 생명력 = 940\n"
+     ]
+    }
+   ],
+   "source": [
+    "a.attacked()\n",
+    "a.attacked()\n",
+    "a.attacked()\n",
+    "a.attacked()\n",
+    "a.attacked()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "99d2b03d001541dab69dfd511a77f358"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(940, 990, 1000)"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.life, b.life, c.life"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "457b838f19f8481892f7bda628517212",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 클래스 상속 \n",
+    "\n",
+    "이제 클래스 상속(class inheritance)이라는 개념을 생각한다. 위에서 만들어 본 클래스는 모든 캐릭터에 공통적인 life 속성만을 가지고 있었다. 하지만 만약 캐릭터도 전사(Warrior), 마법사(Wizard) 등 다양한 직업을 가진 캐릭터가 있고 각 캐릭터들은 서로 다른 초기 속성값을 가지고 태어난다면 어떻게 프로그램해야 할까? 각각의 직업 캐릭터를 별도의 클래스로 만들어도 되겠지만 **클래스 상속을 사용하면 이미 만들어진 클래스 코드를 재사용하여 다른 클래스를 생성할 수 있다**. 즉, 상속 과정에서 공통적으로 사용하는 속성이나 메서드는 두 번 반복해서 코딩할 필요가 없다. 이 때 **상속을 받는 클래스를 자식 클래스(child class), 상속의 대상이 되는 클래스를 부모 클래스(parent class)**라고 한다.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3d71d2ae5ef0407ca0749ea2c02bef7f"
+   },
+   "source": [
+    "`Character` 부모 클래스에서 상속을 통해 `Warrior` 라는 자식 클래스와  `Wizard` 라는 자식 클래스를 만든다 상속을 위한 파이썬 문법은 다음과 같다.\n",
+    "\n",
+    "```\n",
+    "class 자식클래스이름(부모클래스이름):\n",
+    "\n",
+    "    def __init__(self, 속성값1, 속성값2):\n",
+    "        super(자식클래스이름, self).__init__()\n",
+    "        자식 클래스의 초기화 코드\n",
+    "```\n",
+    "\n",
+    "사실 우리가 지금까지 쓰던 클래스 정의를 살펴보면 `object`라는 부모 클래스에서 상속을 받는 것이었다.\n",
+    "\n",
+    "이 코드에서 `super(자식클래스이름, self).__init()__` 부분은 부모 클래스의 초기화 생성자를 호출하는 부분이다. 예를 들어 `Warrior` 라는 클래스에서 부모 클래스인 `Character` 클래스의 생성자를 호출하면 life라는 속성값을 초기화하므로 자식 클래스에서는 이 속성값을 초기화해줄 필요가 없다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "e37cd07a73c74e5bb563ebbd20184158"
+   },
+   "outputs": [],
+   "source": [
+    "class Warrior(Character):\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        super(Warrior, self).__init__()\n",
+    "        self.strength = 15\n",
+    "        self.intelligence = 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "a998ec64c17b45d99a3db8a63d0d6b3b"
+   },
+   "outputs": [],
+   "source": [
+    "class Wizard(Character):\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        super(Wizard, self).__init__()\n",
+    "        self.strength = 5\n",
+    "        self.intelligence = 15"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f6c5e21e54744d6ab2a6233de6777de6"
+   },
+   "source": [
+    "이 클래스의 객체를 만들어 보면 명시적으로 만들지 않았지만 life라는 속성과 attacked 라는 메서드를 가진다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "83d66eec3d504902b4a852624362619e",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "a = Warrior()\n",
+    "b = Wizard()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "9612bd9aa9bc4701a4420eb72d2dfee1"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1000, 1000)"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.life, b.life"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "9612bd9aa9bc4701a4420eb72d2dfee1"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(15, 5)"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.strength, b.strength"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "9e6d723c953749dd906740e814364e8d"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(5, 15)"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.intelligence, b.intelligence"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "ec7bc0a9445d4263b5f04a400fd5757e"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 990\n"
+     ]
+    }
+   ],
+   "source": [
+    "a.attacked()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "34ce3ef0c0a244a3b38cff78eb7a7672"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 990\n"
+     ]
+    }
+   ],
+   "source": [
+    "b.attacked()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "452bfce95f094caa8871e9248b1ddbe5",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 메소드 오버라이딩"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4b00f329441946a0981dcee51d7d5adf"
+   },
+   "source": [
+    "메소드 오버라이딩(Method Overriding) 여러 클래스에 걸쳐서 같은 이름의 메서드를 만드는 것이다. 예를 들어 부모 클래스, 전사 캐릭터 클래스, 마법사 캐릭터 클래스에 공통적으로 `attack` 이라는 메서드가 있지만 각각의 하는 일이 다른 경우에는 다음과 같이 같은 이름의 메서드를 클래스 별로 구현하면 된다. 이렇게 되면 부모 클래스에서 만든 메서드 정의를 자식 클래스에서는 변경해서 사용한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "aed4924a213a4b73b32548dab0af8c3c"
+   },
+   "outputs": [],
+   "source": [
+    "class Character(object):\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        self.life = 1000\n",
+    "        self.strength = 10\n",
+    "        self.intelligence = 10\n",
+    "        \n",
+    "    def attacked(self):\n",
+    "        self.life -= 10\n",
+    "        print(u\"공격받음! 생명력 =\", self.life) \n",
+    "        \n",
+    "    def attack(self):\n",
+    "        print(u\"공격!\")             "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "e868655424d44e1eac8db72608c7acc9"
+   },
+   "outputs": [],
+   "source": [
+    "class Warrior(Character):\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        super(Warrior, self).__init__()\n",
+    "        self.strength = 15\n",
+    "        self.intelligence = 5\n",
+    "        \n",
+    "    def attack(self):\n",
+    "        print(u\"육탄 공격!\") "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "346922786ece469ca16d65ed2a112360"
+   },
+   "outputs": [],
+   "source": [
+    "class Wizard(Character):\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        super(Wizard, self).__init__()\n",
+    "        self.strength = 5\n",
+    "        self.intelligence = 15\n",
+    "        \n",
+    "    def attack(self):\n",
+    "        print(u\"마법 공격!\") "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "6abaa4843ada4a5f80dbb72eb29d2a33",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "a = Character()\n",
+    "b = Warrior()\n",
+    "c = Wizard()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "b9a6441092a14516869d39331c6dd847"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격!\n"
+     ]
+    }
+   ],
+   "source": [
+    "a.attack()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "c015c09ac1804571b819350a98a5a7ab"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "육탄 공격!\n"
+     ]
+    }
+   ],
+   "source": [
+    "b.attack()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "e3f331b95e8445f3ad586c159a38af84"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "마법 공격!\n"
+     ]
+    }
+   ],
+   "source": [
+    "c.attack()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "9ba64d60dec340d5ad901a1da489382d"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 990\n"
+     ]
+    }
+   ],
+   "source": [
+    "a.attacked()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "76ff7a855de845abb44c5ff0f45fde07"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "공격받음! 생명력 = 990\n"
+     ]
+    }
+   ],
+   "source": [
+    "b.attacked()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4862020d7b6441dbac074c8c9577293f",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 참조: 오버로딩 Overloading\n",
+    "\n",
+    "이와 비슷한 이름으로 오버로딩(Overloading)이라는 것이 있는데 이는 전혀 다른 개념이다. 오버로딩은 같은 메서드가 인수의 자료형이나 갯수를 다르게 받을 수 있는 것을 말한다. C++, Java 등에서는 지원하지만 파이썬에서는 오버로딩을 지원하지 않으므로 프로그래머가 내부적으로 알아서 처리해야 한다\n",
+    "\n",
+    "다음은 C++에서 오버로딩을 지원하는 함수 선언의 예이다.\n",
+    "  \n",
+    "```\n",
+    "float length(list p1, list p2);                  // 점 (p1[0], p1[1]) - (p1[0], p1[1]) 까지의 길이\n",
+    "float length(int x1, int y1, int x2, int y2);    // 점 (x1, y1) - (x2, y2) 까지의 길이\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "4a70b09614e74246b7453feffbef4d6c"
+   },
+   "source": [
+    "#### 연습 문제 1\n",
+    "\n",
+    "게임 캐릭터 코드에서 `attacked` 메서드도 오버라이딩을 하여 전사와 마법사가 공격을 받을 때 life 속성값이 다르게 감소하도록 한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "3647336828a848e3ad51feeb56e73566"
+   },
+   "source": [
+    "#### 연습 문제 2\n",
+    "\n",
+    "다음과 같이 자동차를 나타내는 `Car` 클래스를 구현한다. \n",
+    "\n",
+    "* 이 클래스는 최고 속도를 의미하는 `max_speed`라는 속성과 현재 속도를 나타내는 `speed`라는 속성을 가진다.\n",
+    "* 객체 생성시 `max_speed` 속성은  160이 되고 `speed` 속성은 0이 된다.\n",
+    "* `speed_up`, `speed_down`이라는 메서드를 가진다. `speed_up`을 호출하면 `speed` 속성이 20씩 증가하고 `speed_down`을 호출하면 `speed` 속성이 20씩 감소한다.\n",
+    "* 스피드 속성 `speed`의 값은 `max_speed` 속성 값, 즉 160을 넘을 수 없다. 또 0 미만으로 감소할 수도 없다.\n",
+    "* 메서드는 호출시 속도 정보를 인쇄하고 명시적인 반환값을 가지지 않는다.\n",
+    "* 위 기능이 모두 정상적으로 구현되었음을 보이는 코드를 추가한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "9b3eb52c5b604c0e8704f388f3cb611d"
+   },
+   "source": [
+    "#### 연습 문제 3\n",
+    "\n",
+    "`Car` 클래스를 기반으로 `SportCar`와 `Truck`이라는 두 개의 자식 클래스를 구현한다.\n",
+    "\n",
+    "* `SportCar` 클래스는 `max_speed` 속성이 200 이고 `speed_up`, `speed_down` 호출시 속도가 45씩 증가 혹은 감소한다.\n",
+    "* `Truck` 클래스는 `max_speed` 속성이 100 이고 `speed_up`, `speed_down` 호출시 속도가 15씩 증가 혹은 감소한다.\n",
+    "* 스피드 속성 `speed`의 값은 `max_speed` 속성 값을 넘을 수 없다. 또 0 미만으로 감소할 수도 없다.\n",
+    "* 메서드는 호출시 속도 정보를 인쇄하고 명시적인 반환값을 가지지 않는다.\n",
+    "* 위 기능이 모두 정상적으로 구현되었음을 보이는 코드를 추가한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0a5f14f141b840b6ab65aaa8858d7049",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## `pass` 문"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3ff2ce723a2a4f82b3c79560f5f44a3c"
+   },
+   "source": [
+    "파이썬은 들여쓰기를 통해 코드 블럭이 존재함을 알려주어야 한다. 그런데 내용이 없는 클래스나 함수의 경우에는 아무것도 쓰지 않는다면 코드 블럭의 존재 자체도 알려주기 못하기 때문에 `pass`라는 아무 의미 없는 명령을 사용하여 들여쓰기된 코드 블럭을 표시한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "437b170dc0fc4816bd850897ed8df3d2"
+   },
+   "outputs": [],
+   "source": [
+    "def Dummy():\n",
+    "    pass\n",
+    "\n",
+    "d = Dummy()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "390e70c83ca74358be42235700598ad4",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## 특수 메서드"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "244ff29755624bf6a118f3684bf2d06a"
+   },
+   "source": [
+    "파이썬에는 특수 메서드(Special Methods)라는 것이 존재한다. 메서드 이름의 앞과 뒤에 두 개의 밑줄(underscore)이 붙어있는 메서드이다.\n",
+    "이 메서드들은 특수한 용도에 사용하는 것이다 \n",
+    "\n",
+    "예를 들어 파이선 셸에서 변수 이름을 치고 엔터 키(주피터 노트북의 경우에는 시프트 + 엔트)를 치면 변수의 값이 호출되는데 사실 이것은 해당 변수가 가지는 `__repr__`이라는 메서드가 호출되는 것이다. repr은 representation의 약자이다. 또 변수를 `str`이라는 함수에 넣으면 변수를 문자열로 변환해 주는데 이것도 사실은 `__str__`이라는 메서드가 호출되는 것이다. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b531c6144d9e4d56b1e6a8a083e64438",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "예를 들어 다음과 같이 복소수에 대한 클래스인 `Complex` 클래스를 만든다. `r`이라는 속성에 실수부를, `i`이라는 속성에 실수부를 넣는다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "1bd4f23417274a469d079f2691cdea81"
+   },
+   "outputs": [],
+   "source": [
+    "class Complex(object):\n",
+    "    \n",
+    "    def __init__(self, realpart, imagpart):\n",
+    "        self.r = realpart\n",
+    "        self.i = imagpart"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ce7e39f6523e481daab824fddb267b61"
+   },
+   "source": [
+    "`__repr__` 메서드를 정의하지 않으면 `object` 클래스가 가진 기본 `__repr__` 메서드를 사용한다. 이 함수는 클래스 이름과 변수가 위치하고 있는 메모리 주소를 `<>`안에 써서 반환한다. 기본 `__str__` 메서드도 마찬가지이다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "86faa1d9d79e432b9b5fc6d1609485c4"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<__main__.Complex at 0x7f7273c8d450>"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c = Complex(1, 2)\n",
+    "c"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "7890bdff75bf4a319f0b600f7663f15b"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'<__main__.Complex object at 0x7f7273c8d450>'"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "str(c)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0c3802c8219d4ff5a0fede5ef11b5203"
+   },
+   "source": [
+    "이번에는 `__repr__` 메서드와 `__repr__` 메서드를 다음과 같이 새로 정의하여 오버라이딩한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "ad3b74255e524b9c865ee4700e1564db"
+   },
+   "outputs": [],
+   "source": [
+    "class Complex2(Complex):\n",
+    "    \n",
+    "    def __repr__(self):\n",
+    "        return \"Complex: real = %f imag = %f\" % (self.r, self.i)\n",
+    "    \n",
+    "    def __str__(self):\n",
+    "        return \"[for str] \" + self.__repr__()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "7952d43d4f994565a840d06f1c0eabe7"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Complex: real = 1.000000 imag = 1.000000"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c2 = Complex2(1, 1)\n",
+    "c2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "b51c07d8f2f047c3a828d868d97a7e6a"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'[for str] Complex: real = 1.000000 imag = 1.000000'"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "str(c2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fe35fbe7a6884bb0bf235937bcf883be",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "`__getitem__` 메서드를 정의하면 마치 리스트나 사전처럼 `[]` 기호를 사용한 인덱싱을 할 수 있다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "e645038e10444d379b9fb083850a14ae"
+   },
+   "outputs": [],
+   "source": [
+    "class Complex3(Complex2):\n",
+    "    \n",
+    "    def __getitem__(self, key):\n",
+    "        if key == \"r\":\n",
+    "            return self.r\n",
+    "        if key == \"i\":\n",
+    "            return self.i        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "e29f46efe4ae44d38bf8901abc6dd1cc"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Complex: real = 1.000000 imag = 2.000000"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c3 = Complex3(1, 2)\n",
+    "c3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "4904ba85cd244d2eb36d5a1a827f3dbf"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c3[\"i\"]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "84e5ea76f3a843b7b555e947aa813f95"
+   },
+   "source": [
+    "#### 연습 문제 4\n",
+    "\n",
+    "학생의 학번, 이름, 수학 성적, 영어 성적을 저장할 수 있는 클래스를 만들고 평균 성적을 출력하는 메서드를 추가한다. \n",
+    "\n",
+    "노트북 셀에서 이 클래스 객체의 이름을 치면 바로 이름과 학번이 나와야 하고 str 명령을 수행하면 이름을 반환한다. 또한 다음과 같이 수학과 영어 성적을 읽을 수 있어야 한다.\n",
+    "\n",
+    "```\n",
+    "obj[\"math\"], obj[\"english\"]\n",
+    "```\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "anaconda-cloud": {},
+  "celltoolbar": "Slideshow",
+  "kernelspec": {
+   "display_name": "Python [default]",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}

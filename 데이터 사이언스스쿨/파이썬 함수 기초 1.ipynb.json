@@ -1,0 +1,359 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fa686eec1a894ad385be2fffde92ef7a"
+   },
+   "source": [
+    "# 파이썬 함수 기초 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5435dee396e44d828151e6b84b55c55d"
+   },
+   "source": [
+    "**함수(function)**는 입력(input)을 받으면 그 입력에 해당하는 출력(output)을 반환(return)하는 기계와 같다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7fe1967d5ebe47f88a53beee3006d20c"
+   },
+   "source": [
+    "예를 들어 500원을 넣으면 생수가 나오고 1000원을 넣으면 콜라가 나오는 자판기는 다음과 같은 함수이다.\n",
+    "\n",
+    "```\n",
+    "f(500) = \"생수\"\n",
+    "f(1000) = \"콜라\"\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f49603cc23474f8689a409a2f09463f8"
+   },
+   "source": [
+    "파이썬에는 `def` 키워드를 사용하여 다음과 같이 함수를 만들 수 있다.\n",
+    "\n",
+    "\n",
+    "```\n",
+    "def 함수이름(입력변수이름):\n",
+    "   출력변수를 만드는 명령\n",
+    "   return 출력변수이름\n",
+    "   \n",
+    "```\n",
+    "\n",
+    "`def` 키워드는 영어로 \"정의한다\"는 의미를 가지는 define 에서 만들어졌다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6ad5d5067fb64e10aa55ebc0ba4156c8"
+   },
+   "source": [
+    "예를 들어 숫자 x를 입력하면 두 배가 되도록 하는 함수는 다음과 같다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "33da0cf9c0ba469a8259f6292e35ed8b"
+   },
+   "outputs": [],
+   "source": [
+    "def twotimes(x):\n",
+    "    y = 2 * x\n",
+    "    return y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a2c4f5ae32d0466a9743a8f4c41989b3"
+   },
+   "source": [
+    "이렇게 만들어진 함수를 사용하려면 함수 이름과 그 뒤에 괄호로 싸인 입력값을 넣으면 된다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "7ee2500e23db453b8a22136fb5edf628"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "twotimes(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "d32cb2b891584430b49d8da8c9f31f00"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "twotimes(10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "eb9af9ef18ea4e6791bb89038d9b0b99"
+   },
+   "source": [
+    "#### 연습 문제 1\n",
+    "\n",
+    "1. 짝수가 입력되면 \"짝수\"라는 문자열을, 홀수가 입력되면 \"홀수\"라는 문자열을 반환하는 함수를 만든다.\n",
+    "2. 윤년을 나타나는 수가 입력되면 \"윤년\"이라는 문자열을, 그렇지 않은 수가 입력되면 \"평년\"이라는 문자열을 반환하는 함수를 만든다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "49b5b987b06f482abda9b525e7cbd5f3"
+   },
+   "source": [
+    "### 연습 문제 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "ef702f49e46e41bbb8f80211e26363ce"
+   },
+   "source": [
+    "#### 연습 문제 2\n",
+    "\n",
+    "평년의 경우에 1, 3, 5, 7, 8, 10, 12 월은 31일, 4, 6, 9, 11월은 30일, 2월은 28일이다. 월을 나타내는 숫자를 입력하면 그 달의 날짜 수를 반환하는 함수 `days` 를 만든다.  사용 예는 다음과 같다.\n",
+    "\n",
+    "```\n",
+    ">>> days1(11)\n",
+    "30\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "e549eeedec2547e782ec484b508855da"
+   },
+   "source": [
+    "## 여러 개의 입력을 가지는 함수"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "13b44269a39744e9a43393e1aff63e6b"
+   },
+   "source": [
+    "함수의 입력은 한 개가 아니라 여러 개가 되어도 상관없다. 입력 변수가 여러개이면 쉼표, 영어로 comma 를 사용하여 함수를 정의한다. 입력 변수는 원하는 만큼 얼마든지 만들 수 있다.\n",
+    "\n",
+    "```\n",
+    "def 함수이름(입력변수1, 입력변수2, 입력변수3):\n",
+    "   출력변수를 만드는 명령\n",
+    "   return 출력변수이름\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "42c845dfff8941aebe90f6f206c283cc"
+   },
+   "outputs": [],
+   "source": [
+    "def add(x, y):\n",
+    "    return x + y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "16ff374bf9a94520bed4218c6b27a4b7"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add(1, 2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "f057db3e43ad45f9967037dcd4d888b0"
+   },
+   "outputs": [],
+   "source": [
+    "def sum(a, b, c):\n",
+    "    s = a + b + c\n",
+    "    return s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "b4bb5b23dcd246baa29eb5eac504de5e"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sum(1, 2, 3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "b4833e32a18b4794acffc192535b7712"
+   },
+   "source": [
+    "#### 연습 문제 3\n",
+    "\n",
+    "연도를 나타내는 숫자와 월을 나타내는 숫자를 입력하면 그 달의 날짜 수를 반환하는 함수 `days2` 를 만든다. \n",
+    "\n",
+    "사용 예는 다음과 같다.\n",
+    "\n",
+    "```\n",
+    ">>> days2(2015, 1)\n",
+    "31\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "deb0e1b80dfb4fe686aa605e86407afa"
+   },
+   "source": [
+    "## 람다 함수"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3b30d929dd8e4100936c013daad7b626"
+   },
+   "source": [
+    "함수에 이름을 주지 않거나 코드를 짧게 줄여쓰는 방법으로 람다(lambda)함수라는 것이 있다.  예를 들어\n",
+    "\n",
+    "```\n",
+    "def f(x):\n",
+    "    return 2 * x\n",
+    "```\n",
+    "\n",
+    "이 함수 `f` 는 다음 람다 함수와 같다.\n",
+    "\n",
+    "```\n",
+    "lambda x: 2 * x\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c56b62c13a9f455a9e66016c1205b3e1"
+   },
+   "source": [
+    "람다 함수는 함수 자체를 다른 함수의 인수로 넣을 때 주로 사용한다."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [Root]",
+   "language": "python",
+   "name": "Python [Root]"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}

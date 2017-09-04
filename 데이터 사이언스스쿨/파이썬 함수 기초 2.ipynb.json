@@ -1,0 +1,605 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "25cdcfb840704007a2aac270240c10de"
+   },
+   "source": [
+    "# 파이썬 함수 기초 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "739066b96c3b4502bb9c85fed633810e"
+   },
+   "source": [
+    "## 지역 변수"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "7e2038a1eb2b498fa706f5ddc7ddcd4c"
+   },
+   "source": [
+    "함수에 넣은 입력 변수나 함수 안에서 만들어진 변수는 함수 바깥에서는 사용할 수 없다. 혹시 이름이 같은 변수가 있다고 하더라도 별개의 변수가 된다.\n",
+    "\n",
+    "따라서 함수 안에서 만들어지고 사용되는 함수를 **지역 변수**, 영어로 local variable 이라고 한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ccb104538cfc4efbb87b18ba4bb47810"
+   },
+   "source": [
+    "실제로 확인해 보자. 일단 함수 바깥에 혹시라도 y라는 변수가 있으면 `del` 명령으로 지운다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "ef4050eea7eb4716ad3a9112bc21b83b"
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'y' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0mTraceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-1-9062c79d1164>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0;32mdel\u001b[0m \u001b[0my\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'y' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "del y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d9a7eb1b5e794808af8d5ae50f12efff"
+   },
+   "source": [
+    "기존에 y라는 변수가 없었으면 그런 변수가 없다는 오류가 나온다. 만약 기존에 y라는 변수가 있었으면 오류가 출력되지 않고 지워지기만 한다"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "a88aecd458cb4e5193505893e605db7d"
+   },
+   "source": [
+    "이제 다음과 같이 a라는 이름의 지역 변수를 가지는 함수를 만들고 실행시킨다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "e31c3c5830e64029ab12b3d48be96360"
+   },
+   "outputs": [],
+   "source": [
+    "def f(x):\n",
+    "    y = 10 * x\n",
+    "    print(\"y = \", y)\n",
+    "    return y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "2cf94f6ebc614385ab31eb96981366db"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "y =  100\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "f(10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "53a189d87ba4401b8549feb36125b52b"
+   },
+   "source": [
+    "y라는 변수가 생겨났는지 다시 확인한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "4446be5b923242bb97dfbf19c0e70eaa"
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'y' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0mTraceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-4-009520053b00>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0my\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'y' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "40c765378d4a49cdbe27af4ae575f4a2"
+   },
+   "source": [
+    "함수 안에서 만든 y라는 변수는 함수 밖에는 생성되지 않았다.\n",
+    "\n",
+    "이번에는 함수 바깥에서 y라는 변수를 사용해 보자."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "e4fc061a5610498f8868acb4514ce40a"
+   },
+   "outputs": [],
+   "source": [
+    "y = 1000"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "4c2fa6e9cb1246959c01cf9d80c96360"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1000"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "63dd28419e5c428aabf64f434c961ec4"
+   },
+   "source": [
+    "이제 함수를 실행시킨다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "8fdd4fded5bb44e3ae9a9db20d0e3f4b"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "y =  10\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "f(1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "8d72fa9a950642818ed1cef201836536"
+   },
+   "source": [
+    "다시 바깥에서 y값을 확인하면 이전과 같다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "101701410acd4bf39ab8dc2ede0e34dd"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1000"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "fa5ebaf3ffeb4730b08d8769beb5d186"
+   },
+   "source": [
+    "즉, 함수 안에서 만들어지는 지역 변수는 함수 바깥에 아무런 영향을 주지 않는다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "5ee82513f41d47eca3fdd0b1fd5f7a60"
+   },
+   "source": [
+    "#### 연습 문제 1\n",
+    "\n",
+    "10개의 숫자를 입력하면 \"그 숫자들의 합\"과 \"그 숫자들을 제곱한 숫자들의 합\"의 차이(큰 수에서 작을 수를 뺀 값)를 계산하는 함수 `diffsum`를 만든다. 큰 수에서 작은 수를 뺀 결과이므로 항상 0보다 크거나 0과 같아야 한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1d9e3118f0b646018028b04ffb227db5"
+   },
+   "source": [
+    "## 전역 변수"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "df0b9de97ed24b6fb8fe1c113575bf6c"
+   },
+   "source": [
+    "하지만 지역 변수와 반대로 함수 바깥에서 만들어진 변수는 함수 안에서 사용할 수 있다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "53cd74e812484171849329d83785df39"
+   },
+   "outputs": [],
+   "source": [
+    "z = 3\n",
+    "\n",
+    "def f2(x):\n",
+    "    y = z * x\n",
+    "    print(\"y =\", y)\n",
+    "    print(\"z =\", z)\n",
+    "    return y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "e39dbe640bd8451aa80b7ab4fcf90bfd"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "y = 30\n",
+      "z = 3\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "f2(10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "0a46b6829f6f4fd898b22bdbeea05a83"
+   },
+   "source": [
+    "다만 이 때 바깥의 변수와 같은 이름의 변수를 함수 안에 만들면 안된다. \n",
+    "\n",
+    "만약 바깥의 변수와 같은 이름의 변수를 함수 안에 다시 만들면 함수 안에서는 그 지역 변수를 사용하다가 함수 바깥으로 나오면 지역 변수는 사라지고 원래의 변수값으로 되돌아 온다.\n",
+    "\n",
+    "따라서, **함수 안에서는 함수 바깥에 있는 변수의 값을 바꿀 수 없다**."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "11196631d96c4a5399cb975e12aa56ef"
+   },
+   "outputs": [],
+   "source": [
+    "z = 3\n",
+    "\n",
+    "def f3(x):\n",
+    "    z = 99\n",
+    "    y = z * x\n",
+    "    print(\"y =\", y)\n",
+    "    print(\"z =\", z)\n",
+    "    return y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "7c63ea75fbbd4ec2b6d13005f15373bd"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "y = 990\n",
+      "z = 99\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "990"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "f3(10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "3564decb9d20462d88407a9640671bc9"
+   },
+   "source": [
+    "함수 바깥에서는 z가 여전히 3이다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "f01f9028d41146178673e5a0ddffe22a"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "78cb4827c183444fbd1af32c0e358ea9"
+   },
+   "source": [
+    "만약 함수안에서 함수 바깥에 있는 변수의 값을 꼭 바꿔야만 한다면 다음과 같이 함수 이름 앞에 `global` 키워드를 선언해 주면 된다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "074df8e8c2374419a9ef9d9718e046c8"
+   },
+   "outputs": [],
+   "source": [
+    "z = 3\n",
+    "\n",
+    "def f4(x):\n",
+    "    global z\n",
+    "    z = 99\n",
+    "    y = z * x\n",
+    "    print(\"y =\", y)\n",
+    "    print(\"z =\", z)\n",
+    "    return y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "3c1686d15c3c41cfb84e73f101d1add0"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "y = 990\n",
+      "z = 99\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "990"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "f4(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "a08935c52e7c4dc08587d32045b4c11f"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "99"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "91fdfaffd25148069dfd176e707cbd46"
+   },
+   "source": [
+    "함수 바깥의 z 값이 99로 바뀌어 있는 것을 확인할 수 있다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "5b0a21641cdd42f79c0a552a891716c8"
+   },
+   "source": [
+    "### 연습 문제 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "a61c88c556bd4207b141fb99a8b2fa75"
+   },
+   "source": [
+    "#### 연습 문제 2\n",
+    "\n",
+    "함수 바깥에 ``m`` 이라는  전역 변수를 만들고 그 값을 0으로 놓는다.  앞에서 만든 `diffsum` 함수를 고쳐서 `diffsum` 함수와 같은 값을 반환하지만 함수를 실행할 때 마다 `diffsum` 함수에서 계산된 값이 원래 있던 ``m``보다 크면 ``m``을 계산된 값으로 바꾸는 함수 `diffsum2` 를 만든다."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda root]",
+   "language": "python",
+   "name": "conda-root-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}

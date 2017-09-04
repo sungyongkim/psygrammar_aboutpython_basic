@@ -1,0 +1,378 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f36ce78a05dc4f28a4b7af19149b34c1"
+   },
+   "source": [
+    "# 파이썬 for 반복문 기초 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "c9dd26dc0c06451c89996a6d91c89efa"
+   },
+   "source": [
+    "## 중첩 for 반복문"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "72faab92924a40a9b04c9d7944e0acee"
+   },
+   "source": [
+    "어떤 경우에는 반복문 안에서 다시 반복문을 실행해야 하는 경우가 있을 수 있다. 예를 들어 다음과 같이 인쇄해야 하는 경우를 생각해 보자.\n",
+    "\n",
+    "```\n",
+    "0 1 2 3 \n",
+    "1 2 3 4 \n",
+    "2 3 4 5 \n",
+    "3 4 5 6 \n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "6f9a9f74610d4f42a94622228a20c179"
+   },
+   "source": [
+    "여러가지 방법이 있을 수 있지만 다음과 같이 for 반복문 안에 다시 for 반복문을 사용하는 중첩 반복문(nested loop)를 사용할 수도 있다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "c8bd4baef5e040b09555cfad9adb46ed"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 1 2 3 \n",
+      "1 2 3 4 \n",
+      "2 3 4 5 \n",
+      "3 4 5 6 \n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(4):\n",
+    "    for j in range(4):\n",
+    "        print(i + j, end=\" \")\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "482f9be816d94365b01227529f4fed12"
+   },
+   "source": [
+    "중첩 반복문을 사용할 때는 각각의 반복문에서 쓰고 있는 카운터 변수의 이름이 겹치지 않도록 주의해야 한다. 앞의 예에서는 바깥쪽 반복문의 카운터 변수는 i를 사용하였고 안쪽 반복문의 카운터 변수는 j를 사용하여 카운터 변수의 이름이 겹치지 않도록 하였다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "cba2df100f454842851ad6739ee9a0f4"
+   },
+   "source": [
+    "경우의 수를 구하는 데도 중첩 반복문을 사용할 수 있다. 예를 들어 1부터 6까지의 눈금이 있는 주사위를 두 번 던져서 나온 숫자들은 다음과 같이 구한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "e0402d7232a94e4186108a32fea21f10"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 1\n",
+      "1 2\n",
+      "1 3\n",
+      "1 4\n",
+      "1 5\n",
+      "1 6\n",
+      "2 1\n",
+      "2 2\n",
+      "2 3\n",
+      "2 4\n",
+      "2 5\n",
+      "2 6\n",
+      "3 1\n",
+      "3 2\n",
+      "3 3\n",
+      "3 4\n",
+      "3 5\n",
+      "3 6\n",
+      "4 1\n",
+      "4 2\n",
+      "4 3\n",
+      "4 4\n",
+      "4 5\n",
+      "4 6\n",
+      "5 1\n",
+      "5 2\n",
+      "5 3\n",
+      "5 4\n",
+      "5 5\n",
+      "5 6\n",
+      "6 1\n",
+      "6 2\n",
+      "6 3\n",
+      "6 4\n",
+      "6 5\n",
+      "6 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(6):\n",
+    "    n1 = i + 1\n",
+    "    for j in range(6):\n",
+    "        n2 = j + 1\n",
+    "        print(n1, n2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "a294f5ad6ad341208135263a02abf2c7"
+   },
+   "source": [
+    "만약 주사위를 두 번 던져서 나온 숫자들의 합이 4의 배수가 되는 경우만 구해야 한다면 다음과 같이 if 조건문을 추가한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "7c4c1a4019d14590b84598ac016a9e6f"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 3\n",
+      "2 2\n",
+      "2 6\n",
+      "3 1\n",
+      "3 5\n",
+      "4 4\n",
+      "5 3\n",
+      "6 2\n",
+      "6 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(6):\n",
+    "    n1 = i + 1\n",
+    "    for j in range(6):\n",
+    "        n2 = j + 1\n",
+    "        n = n1 + n2\n",
+    "        if n % 4 == 0:\n",
+    "            print(n1, n2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "e3212cebca23460192ad669ad6528237"
+   },
+   "source": [
+    "#### 연습 문제 1\n",
+    "\n",
+    "어떤 주식의 가격은 매일 한 번 동전을 던져서 앞면이 나오면 전날 가격의 2배가 되고 뒷면이 나오면 전날 가격의 절반이 된다. 1일에 주식의 가격이 1024원이었을 경우에 4일의 주식의 가격이 나올 수 있는 경우를 모두 구한다. (힌트: for 반복문이 3개 중첩되어야 한다.)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "b9b181d9adbb4834809ff170ed2a312b"
+   },
+   "source": [
+    "#### 연습 문제 2\n",
+    "\n",
+    "프랑스의 수학자 페르마(Ferma)의 마지막 정리는 다음과 같다.\n",
+    "\n",
+    "> n이 2보다 큰 자연수인 경우에, $a^n + b^n = c^n$ 이 되는 자연수 $a$, $b$, $c$는 존재하지 않는다.\n",
+    "\n",
+    "n이 3이고 a, b, c 가 1부터 10까지의 자연수일 때 페르마의 마지막 정리가 사실임을 중첩 반복문을 써서 보인다. (힌트: 1부터 10까지 반복되는 for 반복문이 3개 중첩되어야 한다.)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "23398a1ff0ad4743987c0d009f7001b6"
+   },
+   "source": [
+    "## 카운터 변수가 변하는 경우"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "d8246c32fc00430a8c47af3b79692122"
+   },
+   "source": [
+    "가장 복잡한 경우는 안쪽의 반복문의 반복 횟수가 바깥쪽 반복문의 카운터 변수에 따라 변하는 경우이다.\n",
+    "\n",
+    "예를 들어 1부터 5까지의 합은 다음과 같이 하나의 반복문으로 구할 수 있지만, "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "5c0b993c76c342709efd7439ac3436a7"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 5\n",
+    "\n",
+    "sum = 0\n",
+    "for i in range(n):\n",
+    "    sum = sum + (i + 1)\n",
+    "print(sum)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4045d6cd7cee4f49924a67afc9185102"
+   },
+   "source": [
+    "1부터 1까지의 합, 1부터 2까지의 합, 1부터 3까지의 합, 이런 식으로 1부터 10까지의 합을 각각 다 구해야 한다면 다음과 같이 반복문을 중첩해야 한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "87baf596042e4bbab7daa574fbdf804c"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "3\n",
+      "6\n",
+      "10\n",
+      "15\n",
+      "21\n",
+      "28\n",
+      "36\n",
+      "45\n",
+      "55\n"
+     ]
+    }
+   ],
+   "source": [
+    "for j in range(10):\n",
+    "    sum = 0\n",
+    "    for i in range(j + 1):\n",
+    "        sum = sum + (i + 1)\n",
+    "    print(sum)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "0d8dd919d4c64b3ebfcf06bc2534c638"
+   },
+   "source": [
+    "#### 연습 문제 3\n",
+    "\n",
+    "다음과 같은 수열이 있을 경우에 $n$번째 수열의 값을 구한다.\n",
+    "\n",
+    "$$ \n",
+    "1\n",
+    "$$\n",
+    "\n",
+    "$$ \n",
+    "1 + (1 + 2)\n",
+    "$$\n",
+    "\n",
+    "$$ \n",
+    "1 + (1 + 2) + (1 + 2 + 3)\n",
+    "$$\n",
+    "\n",
+    "$$ \n",
+    "1 + (1 + 2) + (1 + 2 + 3) + (1 + 2 + 3 + 4)\n",
+    "$$\n",
+    "\n",
+    "$$ \\vdots $$\n",
+    "$$ \n",
+    "1 + (1 + 2) + (1 + 2 + 3) + (1 + 2 + 3 + 4) + \\cdots + (1 + \\cdots + n)\n",
+    "$$\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [Root]",
+   "language": "python",
+   "name": "Python [Root]"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}

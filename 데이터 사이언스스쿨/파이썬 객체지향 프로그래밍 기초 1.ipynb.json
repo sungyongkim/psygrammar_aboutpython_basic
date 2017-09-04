@@ -1,0 +1,419 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0ed9d8ec3ce74e0284e43e8a53117fe8"
+   },
+   "source": [
+    "# 파이썬 객체지향 프로그래밍 기초 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ddf595aca5324f219a7a71f856e322bd"
+   },
+   "source": [
+    "## 객체"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "cb6e5db0b2e747ecafcd3a379f7c9967"
+   },
+   "source": [
+    "프로그램이 어떤 작업을 수행하기 위해서는 (1)데이터와 (2)데이터를 조작하는 행위, 두 가지 요소가 필요하다. 일반적으로 데이터는 변수(variable)에 넣어서 사용하고 데이터를 조작하는 일은 함수(function)로 구성해서 쉽게 실행시킬 수 있도록 만들어 놓는다.\n",
+    "\n",
+    "**객체**(object)는 서로 연관된 데이터와 그 데이터를 조작하기 위한 함수를 하나의 집합에 모아놓은 것을 말한다.\n",
+    "\n",
+    "집합의 원소가 되는 변수나 함수는 **멤버**(member) 또는 **속성**(attribute)이라고 한다. 특히 객체의 속성인 함수는 **메서드**(method)라고 부른다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "1d6db605603c41e2bb696382d376bd7c"
+   },
+   "source": [
+    "## 예: 사각형의 면적 구하기"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "71449dd95e794f398cb4df296d7fde91"
+   },
+   "source": [
+    "예를 들어 사각형의 면적을 구하는 프로그램을 만든다고 하자. 필요한 변수와 함수는 다음과 같다.\n",
+    "\n",
+    "1. 가로 길이와 세로 길이라는 두 개의 데이터를 넣을 변수\n",
+    "2. 두 길이를 곱해서 면적을 구하는 함수"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "c70a68ae424c41ba9addcd2af1fe9e3e"
+   },
+   "source": [
+    "객체지향을 사용하지 않고 파이썬으로 구현하면 다음과 같아진다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "56390e74cd9d44e98874a573b53e7af5"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "200\n"
+     ]
+    }
+   ],
+   "source": [
+    "h = 10\n",
+    "v = 20\n",
+    "\n",
+    "def area(h, v):\n",
+    "    return h * v\n",
+    "\n",
+    "a = area(h, v)\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "0f6f37acb7c84b5d874fccadf099fb49"
+   },
+   "source": [
+    "위 프로그램에서 사각형의 가로 길이를 나타내는 변수 `h`, 사각형의 세로 길이를 나타내는 변수 `v`, 그리고 이 사각형의 면적을 계산하는 함수 `area()`는 제각기 떨어져 있다. 하지만 객체 지향 프로그래밍에서는 이 세가지를 하나의 객체(object)로 묶을 수 있다. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "461119dfd8304a8a919662d3de35a34f"
+   },
+   "source": [
+    "다음은 이 프로그램을 객체 지향 방식으로 다시 구현한 것이다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "32cf4aa03cda40dfa48d2ddbda12c919"
+   },
+   "outputs": [],
+   "source": [
+    "class Rectangle(object):\n",
+    "    \n",
+    "    def __init__(self, h, v):\n",
+    "        self.h = h\n",
+    "        self.v = v\n",
+    "        \n",
+    "    def area(self):\n",
+    "        return self.h * self.v"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "4fba0939a71948b9ad569aad344bfdd5"
+   },
+   "source": [
+    "이 부분은 클래스(class) 구현이라고 한다. 실제로 길이 변수들을 저장하고 면적을 계산하는 코드는 다음과 같다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "cf84beb92d0c4b22a822e418882e9041"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "200\n"
+     ]
+    }
+   ],
+   "source": [
+    "r = Rectangle(10, 20)    \n",
+    "a = r.area()\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "83d8b3ed862a4f2fa8708edd35360850"
+   },
+   "source": [
+    "위 프로그램에서 `r`이 바로 객체이다. 어떻게 위와 같은 코드를 만드는지에 대해서는 곧 자세히 설명할 것이다.\n",
+    "\n",
+    "객체 `r`은 사각형의 가로 길이와 세로 길이를 나타내는 변수 `h`와 `v` 그리고 면적을 계산하는 함수 `area()`가 합쳐져서 만들어진 것이다. 객체 `r`에 포함된 이 변수들과 함수, 즉 속성을 꺼내려면 객체 이름 뒤에 점(.)을 붙인 다음 속성 이름을 치면 된다. 다음과 같이 입력해 보면 알 수 있다. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "0ae6301f5bed4223ac8de365fcb69224"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "r.h"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "42ff56d9970c422282286e13f709defb"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "r.v"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "38978f00de9f4c3a93eec080f6b07b5f"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "200"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "r.area()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "ccf76584091d42bbab2cff93d0f98f83"
+   },
+   "source": [
+    "## 클래스"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "f8a37b9ce0494670a864ba078b5f48c6"
+   },
+   "source": [
+    "객체 지향 프로그래밍에서 객체를 만들려면 객체를 바로 만들지 못하고 항상 클래스(class)라는 것을 만든 후에 그 클래스를 이용하여 객체를 만들어야 한다.\n",
+    "\n",
+    "위 예제에서 `Rectangle`은 클래스이고 `r`은 `Rectangle` 클래스로 만들어진 객체이다. 객체와 클래스의 관계는 \"붕어빵\"과 \"붕어빵을 굽는 틀\"에 비유할 수 있다. 즉, 정해진 속성, 여기에서는 가로 길이 `h`와 세로 길이 `v`라는 속성을 가지도록 사각형 클래스를 한 번 만들어 놓으면 이 속성을 가지는 실제 사각형은 얼마든지 많이 만들 수 있다.\n",
+    "\n",
+    "<img src=\"https://datascienceschool.net/upfiles/4aac5f2a9d454d398e8e73cc2f4bc9b9.png\" style=\"width:100%;\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "77ee7faf126147558c1869c332622914"
+   },
+   "source": [
+    "예를 들어 위에서 만들어 놓은 `Rectangle` 클래스로 다음과 같이 5개의 사각형을 만들 수도 있다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": true,
+    "school_cell_uuid": "324de69bfaab4f43b2d49d0227d18ee2"
+   },
+   "outputs": [],
+   "source": [
+    "a = Rectangle(1, 1)   # 가로 1, 세로 1인 사각형\n",
+    "b = Rectangle(2, 1)   # 가로 2, 세로 1인 사각형\n",
+    "c = Rectangle(4, 2)   # 가로 4, 세로 2인 사각형\n",
+    "d = Rectangle(6, 3)   # 가로 6, 세로 3인 사각형\n",
+    "e = Rectangle(8, 5)   # 가로 8, 세로 5인 사각형"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "88f41a82ce854064ba986b21d4c906bb"
+   },
+   "source": [
+    "이 사각형들의 면적은 다음과 같이 계산한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": false,
+    "school_cell_uuid": "d2cf1206d17241eabbf2863b0639e7cf"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "8\n",
+      "18\n",
+      "40\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(a.area())\n",
+    "print(b.area())\n",
+    "print(c.area())\n",
+    "print(d.area())\n",
+    "print(e.area())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "b502fceec9794f3e9f029d812e97bb67"
+   },
+   "source": [
+    "## 생성자"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "school_cell_uuid": "bbfe7c16eccb4bf4a1a07d2f9c0e2fba"
+   },
+   "source": [
+    "파이썬에서 클래스를 정의하는 문법은 다음과 같다.\n",
+    "\n",
+    "\n",
+    "```\n",
+    "class 클래스이름(object):\n",
+    "    \n",
+    "    def __init__(self, 속성값1, 속성값2, 속성값3):\n",
+    "        self.속성이름1 = 속성값1\n",
+    "        self.속성이름2 = 속성값2\n",
+    "        self.속성이름3 = 속성값3\n",
+    "\n",
+    "```        \n",
+    "\n",
+    "이 때 속성값 인수는 필요하지 않다면 없어도 된다. \n",
+    "\n",
+    "여기에서 class 블럭안에 정의된 `__init__`란 함수는 생성자(constructor)라고 하며 클래스 정의에서 가장 중요한 함수이다.\n",
+    "\n",
+    "객체를 생성할 때는 `클래스이름`이란 이름을 가진 함수를 호출해야 하는데 이 때 실제로는 `__init__`로 정의된 생성자 함수가 호출된다. 생성자 함수 내부에서는 생성자를 호출할 때 넣은 입력 변수, 즉 인자의 값을 속성값으로 저장한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "3bef5c4fdef848c2b4bb8c9148888c15"
+   },
+   "source": [
+    "#### 연습 문제 1\n",
+    "\n",
+    "삼각형의 넓이를 계산하기 위한 클래스를 만든다. 이 클래스는 다음과 같은 속성을 가진다.\n",
+    "\n",
+    "* 밑변의 길이 `b` 와 높이 `h`\n",
+    "* 삼각형의 넓이를 계산하는 메서드 `area`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "bootstrap": {
+     "panel": {
+      "class": "panel-default"
+     }
+    },
+    "school_cell_uuid": "26f1be1203d54becaaba4521ab272722"
+   },
+   "source": [
+    "#### 연습 문제 2\n",
+    "\n",
+    "사각 기둥의 부피를 계산하기 위한 클래스를 만든다. 이 클래스는 다음과 같은 속성을 가진다.\n",
+    "\n",
+    "* 밑면의 가로 길이 `a`, 밑면의 세로 길이 `b`, 높이 `h`\n",
+    "* 부피를 계산하는 메서드 `volume`\n",
+    "* 겉넓이를 계산하는 메서드 `surface`"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [Root]",
+   "language": "python",
+   "name": "Python [Root]"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
