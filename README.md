@@ -60,6 +60,8 @@ notebook: 3_pending_from_me
 
 ### aboutpython_basic
 
+- [데이터사이언스 스](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
+
 ### psychopy
 
 #### KeyActivity
